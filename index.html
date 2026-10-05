@@ -11,7 +11,7 @@
   --bg:oklch(13% 0.02 260);--ink:oklch(97% 0.01 90);--ink2:oklch(80% 0.02 90);--ink3:oklch(64% 0.02 90);
   --gold:oklch(84% 0.14 85);--gold2:oklch(70% 0.15 70);--blue:oklch(80% 0.12 230);--red:oklch(70% 0.19 25);--green:oklch(80% 0.16 150);
   --line:oklch(100% 0 0 / .11);
-  --fs-xxl:clamp(64px,8.5vw,160px);--fs-xl:clamp(44px,5vw,92px);--fs-l:clamp(30px,2.9vw,52px);--fs-m:clamp(21px,1.7vw,31px);--fs-s:clamp(17px,1.25vw,23px);
+  --fs-xxl:clamp(64px,8.5vw,160px);--fs-xl:clamp(44px,5vw,92px);--fs-l:clamp(34px,3.4vw,62px);--fs-m:clamp(22px,1.75vw,32px);--fs-s:clamp(18px,1.3vw,24px);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-snap-type:y proximity;scroll-behavior:smooth;background:var(--bg)}
@@ -20,7 +20,7 @@ body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:
   radial-gradient(900px 700px at -10% 110%, oklch(45% 0.10 240 / .30), transparent 60%),var(--bg);
   font-feature-settings:"tnum" 1;line-height:1.25}
 section.slide{min-height:100svh;scroll-snap-align:start;padding:clamp(28px,4vw,64px) clamp(22px,5.5vw,100px) clamp(60px,6vw,90px);display:flex;flex-direction:column;justify-content:center;position:relative;border-top:1px solid var(--line)}
-.kicker{font-size:var(--fs-s);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:16px;display:flex;gap:16px;align-items:center}
+.kicker{font-size:clamp(20px,1.5vw,27px);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:16px;display:flex;gap:16px;align-items:center}
 .kicker .no{display:inline-grid;place-items:center;width:1.9em;height:1.9em;border-radius:50%;background:var(--gold);color:oklch(20% 0.04 80);font-weight:800;letter-spacing:0}
 h1,h2{font-family:Fraunces,Georgia,serif;font-weight:500;letter-spacing:-.02em;line-height:1.02}
 h1{font-size:var(--fs-xl)}
@@ -53,7 +53,7 @@ ul.big li b{color:var(--gold);font-weight:700}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
 .cover{background:radial-gradient(900px 600px at 70% 40%, oklch(60% 0.14 80 / .25), transparent 60%)}
-.cover h1{font-size:clamp(42px,5.6vw,98px);max-width:16ch}
+.cover h1{font-size:clamp(40px,5.2vw,92px);max-width:16ch}
 .cover .meta{display:flex;gap:clamp(24px,4vw,64px);flex-wrap:wrap;margin-top:clamp(28px,3.5vw,56px)}
 .cover .meta div{font-size:var(--fs-m)}
 .cover .meta span{display:block;font-size:var(--fs-s);color:var(--ink3);text-transform:uppercase;letter-spacing:.12em;font-weight:600;margin-bottom:6px}
@@ -95,7 +95,7 @@ ul.big li b{color:var(--gold);font-weight:700}
 .arrow{font-size:var(--fs-l);color:var(--ink3);align-self:center;text-align:center}
 .card table{font-size:clamp(16px,1.15vw,21px)}.card td{padding:clamp(6px,.55vw,9px) 10px;white-space:nowrap}.card th{padding:6px 10px;font-size:clamp(12px,.85vw,15px);white-space:nowrap}.card td small{white-space:normal;font-size:clamp(12px,.85vw,15px)}
 .xdense{font-size:clamp(17px,1.25vw,22px)}.xdense td{padding:clamp(7px,.65vw,11px) 12px}.xdense td small{font-size:clamp(13px,.95vw,17px)}
-#s4 .split{grid-template-columns:1.45fr .55fr;align-items:center}#cps{max-height:46vh;margin:0 auto}#s4 h2{margin-bottom:8px}#s4 .step{padding:clamp(12px,1.1vw,18px) clamp(14px,1.4vw,22px)}#s4 .step .big{font-size:clamp(36px,3.3vw,60px)}#s4 .step .sub{margin-top:4px;font-size:clamp(14px,1.05vw,19px)}#s4 .step .lab{margin-bottom:4px;font-size:clamp(13px,1vw,18px)}
+#s3 .card .sub,#s5 .note,#s3 .note{font-size:clamp(16px,1.15vw,21px)}#s3 h2,#s5 h2{margin-bottom:14px}#s3 .card .big{font-size:clamp(40px,4.2vw,78px)}#s4 .split{grid-template-columns:1.45fr .55fr;align-items:center}#cps{max-height:46vh;margin:0 auto}#s4 h2{margin-bottom:8px}#s4 .step{padding:clamp(12px,1.1vw,18px) clamp(14px,1.4vw,22px)}#s4 .step .big{font-size:clamp(36px,3.3vw,60px)}#s4 .step .sub{margin-top:4px;font-size:clamp(14px,1.05vw,19px)}#s4 .step .lab{margin-bottom:4px;font-size:clamp(13px,1vw,18px)}
 #s6 .card .sub{font-size:clamp(15px,1.1vw,20px)}
 @media (max-width:1100px){.g6{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:900px){
@@ -119,10 +119,10 @@ ul.big li b{color:var(--gold);font-weight:700}
   <div class="meta">
     <div><span>For</span>Harel, CEO</div>
     <div><span>From</span>Omri Gitter</div>
-    <div><span>Period</span>Launch Mon 28 Sep → Sun 4 Oct midnight, plus overnight orders</div>
+    <div><span>Period</span>Launch Mon 28 Sep → Sun 4 Oct midnight, plus this morning's orders</div>
     <div><span>Source</span>Meta Ads Manager (Israel time), pixel/CAPI dataset</div>
   </div>
-  <p class="note">Seats = paid orders credited by Meta to the Julie masterclass campaign. 5 internal test orders from 24 Sep are excluded everywhere. Today's spend (Monday, day in progress) is excluded; the two orders at 01:00 and 03:00 this morning came from Sunday's US-evening delivery and are counted with Sunday.</p>
+  <p class="note">Seats = paid orders credited by Meta to the Julie masterclass campaign. 5 internal test orders from 24 Sep are excluded everywhere. Today's spend (Monday, day in progress) is excluded; the three orders this morning (01:00, 03:00 and 09:xx) came from Sunday's US-evening delivery and are counted with Sunday's traffic.</p>
   <div class="foot"><span>Confidential · board use</span><span>1 / 14</span></div>
 </section>
 
@@ -130,11 +130,11 @@ ul.big li b{color:var(--gold);font-weight:700}
 <section class="slide" id="s2">
   <div class="kicker"><span class="no">1</span>The 30-second read</div>
   <ul class="big">
-    <li class="reveal">We launched on <b>Monday 28 September</b>. Seven days later we have <b>10 paid seats</b> ($610 revenue) from the campaign, with <b>$5,758</b> spent, 92% of the week-one plan budget.</li>
+    <li class="reveal">We launched on <b>Monday 28 September</b>. Seven days later we have <b>11 paid seats</b> from the campaign on <b>$5,758</b> of spend (92% of the week-one plan budget), 3 of them this morning.</li>
     <li class="reveal">The first four days were a <b>testing phase</b>: formats, audiences, cost caps and placements. $2,671 bought 2 seats and the answers we needed.</li>
-    <li class="reveal">The last three days were the <b>selling phase</b>: $3,087 bought 8 seats. Cost per seat went <b>$1,336 → $386 → $322</b> (testing → selling → Sunday afternoon-to-overnight).</li>
+    <li class="reveal">The last three days were the <b>selling phase</b>: $3,087 bought 9 seats. Cost per seat went <b>$1,336 → $343 → $242</b> (testing → selling → since Sunday noon).</li>
     <li class="reveal">The page works: <b>2.2% of visitors buy</b> (plan 1.5%). The problem is the price of the visitor: Facebook charges us <b>$241–344 per 1,000 views</b> against a plan of $20. Every change we made attacks that number, and creator videos already bring visitors at a third of the film's cost.</li>
-    <li class="reveal">Plan to the event stays inside your budget. <b>Base forecast 270–290 seats</b> by 27 Oct, with cost per seat falling into the <b>$90 range</b> by week 4. 500 requires $70 per seat from today; the gates on slide 13 decide scale or stop.</li>
+    <li class="reveal">Plan to the event stays inside your budget. <b>Base forecast 270–290 seats</b> by 27 Oct, with cost per seat falling into the <b>$90 range</b> by week 4. Budget follows cost per seat: we scale what sells under target and cut what does not. The gates on slide 13 decide scale or stop.</li>
   </ul>
   <div class="foot"><span>All figures verified in Ads Manager this morning</span><span>2 / 14</span></div>
 </section>
@@ -152,34 +152,34 @@ ul.big li b{color:var(--gold);font-weight:700}
     <div class="card phase sell reveal">
       <div class="lab">Selling phase · Fri 2 Oct – Sun 4 Oct midnight · 3 days</div>
       <div class="big num green" data-count="3087" data-prefix="$">$3,087</div>
-      <div class="sub"><b style="color:var(--ink)">8 seats · $386 per seat.</b> Intent targeting on every set, UGC creator videos live, Reels with Julie's music, Instagram narrowed to feed only. Includes the 2 overnight orders (01:00, 03:00 Sun) from Sunday's US-evening traffic. Sunday afternoon to overnight alone: $966 → 3 seats, $322 per seat.</div>
+      <div class="sub"><b style="color:var(--ink)">9 seats · $343 per seat.</b> Intent targeting on every set, creator videos live, Reels with Julie's music, Instagram narrowed to feed only. Includes this morning's 3 orders (01:00, 03:00, 09:00) from Sunday's US-evening traffic. Since Sunday noon: $966 of spend → 4 seats, $242 per seat.</div>
     </div>
   </div>
   <div class="tbl" style="margin-top:clamp(16px,2vw,30px)"><table class="reveal dense">
     <tr><th>Week 1 · 28 Sep – 4 Oct</th><th class="n">CEO plan</th><th class="n">Actual</th><th class="n">Read</th></tr>
     <tr><td>Spend</td><td class="n">$6,286</td><td class="n">$5,758</td><td class="n"><span class="pill p-green">92% · on budget</span></td></tr>
-    <tr><td>Paid seats</td><td class="n">76</td><td class="n">10</td><td class="n"><span class="pill p-red">behind on volume</span></td></tr>
+    <tr><td>Paid seats</td><td class="n">76</td><td class="n">11</td><td class="n"><span class="pill p-red">behind on volume</span></td></tr>
     <tr><td>Visitors who buy</td><td class="n">1.5%</td><td class="n">2.2% selling phase</td><td class="n"><span class="pill p-green">above plan</span></td></tr>
     <tr><td>Price per 1,000 views (Facebook feed)</td><td class="n">$20</td><td class="n">$344 → $241</td><td class="n"><span class="pill p-red">the whole gap</span></td></tr>
   </table></div>
-  <div class="foot"><span>Revenue $610 · 6 × $49 Standard · 4 × $79 VIP</span><span>3 / 14</span></div>
+  <div class="foot"><span>Spend counted to Sunday midnight; today's spend excluded</span><span>3 / 14</span></div>
 </section>
 
 <!-- 4 COST PER SEAT TREND -->
 <section class="slide" id="s4">
   <div class="kicker"><span class="no">3</span>Cost per seat is falling</div>
-  <h2>From <b>$1,336</b> in testing to <b>$322</b> on Sunday afternoon. Next stops: $250 · $120 · $90.</h2>
+  <h2>From <b>$1,336</b> in testing to <b>$242</b> since Sunday noon. Next stops: $120 · $90.</h2>
   <div class="split">
     <div class="reveal">
       <svg class="chart" id="cps" viewBox="0 0 900 520" role="img" aria-label="Daily spend and seats, 28 Sep to 4 Oct, with cost per seat by phase"></svg>
     </div>
     <div class="steps" style="grid-template-columns:1fr">
       <div class="card step reveal"><div class="lab">Testing · 28 Sep – 1 Oct</div><div class="big num dim">$1,336</div><div class="sub">$2,671 · 2 seats · days 3 and 4 had no sale</div></div>
-      <div class="card step reveal"><div class="lab">Selling · 2 – 4 Oct</div><div class="big num gold">$386</div><div class="sub">$3,087 · 8 seats incl. 2 overnight</div></div>
-      <div class="card step reveal"><div class="lab">Sun 12:00 → Mon 03:00</div><div class="big num green">$322</div><div class="sub">$966 of Sunday spend · 3 seats</div></div>
+      <div class="card step reveal"><div class="lab">Selling · 2 – 4 Oct</div><div class="big num gold">$343</div><div class="sub">$3,087 · 9 seats incl. 3 this morning</div></div>
+      <div class="card step reveal"><div class="lab">Sun 12:00 → Mon 09:00</div><div class="big num green">$242</div><div class="sub">$966 of Sunday spend · 4 seats</div></div>
     </div>
   </div>
-  <p class="note">The product sells at $49 / $79. The business case needs cost per seat in the product-price range; week 2–4 targets are $250 → $120 → $90 and are the gate criteria on slide 13.</p>
+  <p class="note">The product sells at $49 / $79. The business case needs cost per seat in the product-price range; week 2–4 targets are $250 → $120 → $90 and are the gate criteria on slide 13. Sunday's traffic alone: 5 seats on $1,774, $355 per seat.</p>
   <div class="foot"><span>Meta Ads Manager · masterclass campaign #118149</span><span>4 / 14</span></div>
 </section>
 
@@ -197,7 +197,7 @@ ul.big li b{color:var(--gold);font-weight:700}
     <tr><td>Checkout started → paid seat</td><td class="n">75%</td><td class="n">33%</td><td class="n">86%</td><td class="n"><span class="pill p-green">above plan</span></td></tr>
     <tr class="total"><td>Visitor → paid seat</td><td class="n">1.5%</td><td class="n">1.15%</td><td class="n">2.2%</td><td class="n"><span class="pill p-green">above plan</span></td></tr>
   </table></div>
-  <p class="note">Selling-phase funnel counts events completed by Sunday midnight (6 seats of 7 checkouts); the 2 overnight orders are in the money math on slides 3–4. Overlay = Facebook's cheap "Reels overlay" placement: 193 visits at $1.44, zero carts; removed 3 Oct and excluded from visitor costs here.</p>
+  <p class="note">Selling-phase funnel counts events completed by Sunday midnight (6 seats of 7 checkouts); this morning's 3 orders are in the money math on slides 3–4. Overlay = Facebook's cheap "Reels overlay" placement: 193 visits at $1.44, zero carts; removed 3 Oct and excluded from visitor costs here.</p>
   <div class="foot"><span>Funnel verified: pixel + CAPI, one browser and one server event per order since 4 Oct</span><span>5 / 14</span></div>
 </section>
 
@@ -253,8 +253,8 @@ ul.big li b{color:var(--gold);font-weight:700}
     <tr><td>Thu 1 Oct</td><td>Set 01 rebuilt: 41 longevity interests AND (engaged shoppers OR top-25% income), 45–64, Advantage+ off. Reels added</td><td>Pool too small (11 interests); need intent + buyer signal</td><td>CPM $429 → $150 same day</td></tr>
     <tr><td>Fri 2 Oct</td><td>Set 03 broad → same intent rule, ages 35–65+. Blueprint prospecting aligned to same rule</td><td>Broad audience bought visits, not carts</td><td>2 seats (sets 01, 03). First selling day</td></tr>
     <tr><td>Sat 3 Oct</td><td>4 UGC creator videos live in new set 04. Sets 05 (top-10% income) and 06 (shoppers 45–64) launched. 3 lookalikes into 02. All sets: FB feed + FB Reels + IG feed. Reels overlay removed. Banners → Reels video with Julie's music</td><td>Spread learning across 6 intent levels; stop paying for junk placements; test creator format</td><td>2 seats. CPM $17–49 on undisturbed sets. UGC $196 per seat</td></tr>
-    <tr><td>Sun 4 Oct</td><td>Duplicate Meta-side CAPI source disconnected. Budgets raised to $1,611/day</td><td>"Pixel issue" flag: every order counted twice</td><td>Dedup fixed. Edits reset learning: CPM $394. 2 seats + 2 overnight</td></tr>
-    <tr><td>Mon 5 Oct</td><td>Man "33 years" creator video and static gold banner paused. Woman "five habits" into set 03. Gold Reels video into 03/04. No further edits until Thursday</td><td>Cut 0-cart ads; let Meta finish learning</td><td>Frozen. Gate Thu 8 Oct 17:00</td></tr>
+    <tr><td>Sun 4 Oct</td><td>Duplicate Meta-side CAPI source disconnected. Budgets raised to $1,611/day</td><td>"Pixel issue" flag: every order counted twice</td><td>Dedup fixed. Edits reset learning: CPM $394. 2 seats + 3 from the same traffic this morning</td></tr>
+    <tr><td>Mon 5 Oct</td><td>Man "33 years" creator video and static gold banner paused. Woman "five habits" into set 03. Gold Reels video into 03/04. No further edits until Thursday</td><td>Cut 0-cart ads; let Meta finish learning</td><td>3 seats by 09:00 (sets 04, 04, 03). Gate Thu 8 Oct 17:00</td></tr>
   </table></div>
   <div class="foot"><span>Every change logged with before/after snapshot and rollback</span><span>7 / 14</span></div>
 </section>
@@ -280,16 +280,16 @@ ul.big li b{color:var(--gold);font-weight:700}
     <div class="card set reveal">
       <div class="id">03 <small>#108815</small></div><div class="nm">Wide intent · 35–65+</div>
       <div class="aud">41 interests AND engaged shoppers. Widest age band; the 65+ buyers live here.</div>
-      <div class="kv"><span>Budget</span><b>$499 / day</b><span>Selling phase</span><b>$773 · 2 seats</b><span>Week 1</span><b>$1,623 · 2 seats</b></div>
+      <div class="kv"><span>Budget</span><b>$499 / day</b><span>Selling phase</span><b>$773 · 2 seats</b><span>Today</span><b>+1 seat</b></div>
       <div class="ads"><figure><img src="assets/ads/ad12-julie-65s.jpg" alt=""><figcaption>Julie 65s</figcaption></figure><figure class="new"><img src="assets/ads/ad17-woman-habits.jpg" alt=""><figcaption>Woman · habits</figcaption></figure><figure class="new"><img src="assets/ads/card-gold-reels.jpg" alt=""><figcaption>Gold Reels</figcaption></figure></div>
       <div class="res">Cheapest real views ($72 CPM). <b>$387 per seat.</b></div>
     </div>
     <div class="card set reveal">
       <div class="id">04 <small>#108816</small></div><div class="nm">Creator videos · 35–65+</div>
       <div class="aud">Same intent rule as 01. Only UGC creator videos, so the format is measured on its own.</div>
-      <div class="kv"><span>Budget</span><b>$479 / day</b><span>Selling phase</span><b>$392 · 2 seats</b><span>Live since</span><b>Sat 3 Oct</b></div>
+      <div class="kv"><span>Budget</span><b>$479 / day</b><span>Selling phase</span><b>$392 · 2 seats</b><span>Today</span><b>+2 seats</b></div>
       <div class="ads"><figure><img src="assets/ads/ad16-woman-dna.jpg" alt=""><figcaption>Woman · DNA</figcaption></figure><figure><img src="assets/ads/ad17-woman-habits.jpg" alt=""><figcaption>Woman · habits</figcaption></figure><figure><img src="assets/ads/ad18-man-smoking.jpg" alt=""><figcaption>Man · smoking</figcaption></figure><figure class="new"><img src="assets/ads/card-gold-reels.jpg" alt=""><figcaption>Gold Reels</figcaption></figure></div>
-      <div class="res"><b>$196 per seat.</b> Best set. Budget raised.</div>
+      <div class="res"><b>$196 per seat.</b> Best set. 4 seats in 60 hours. Budget raised.</div>
     </div>
     <div class="card set reveal">
       <div class="id">05 <small>#108817</small></div><div class="nm">Top-10% income · 35–65+</div>
@@ -306,7 +306,7 @@ ul.big li b{color:var(--gold);font-weight:700}
       <div class="res">1 checkout, 0 seats. CPM $434. Decision Thursday.</div>
     </div>
   </div>
-  <p class="note">All six sets: Facebook feed + Facebook Reels + Instagram feed, United States, manual audiences, learning phase. Total budget $1,895 / day as set this morning. 16 live ads; "NEW" = added this morning. Thumbnails are the live ad creatives.</p>
+  <p class="note">All six sets: Facebook feed + Facebook Reels + Instagram feed, United States, manual audiences, learning phase. Budgets move with cost per seat: sets under target get more, sets without seats get cut at Thursday's gate. 16 live ads; "NEW" = added this morning. Thumbnails are the live ad creatives.</p>
   <div class="foot"><span>Ads Manager, 5 Oct 09:00</span><span>8 / 14</span></div>
 </section>
 
@@ -347,17 +347,17 @@ ul.big li b{color:var(--gold);font-weight:700}
 
 <!-- 11 PLAN -->
 <section class="slide" id="s11">
-  <div class="kicker"><span class="no">10</span>Plan to the 27 October event · budgets never exceed the CEO plan</div>
+  <div class="kicker"><span class="no">10</span>Plan to the 27 October event · spend follows cost per seat, inside the CEO envelope</div>
   <div class="tbl"><table class="reveal dense xdense">
     <tr><th>Week</th><th class="n">Budget (CEO plan)</th><th class="n">CPM target</th><th class="n">Cost / seat target</th><th class="n">Seats · base</th><th class="n">Seats · plan case</th><th class="n">Cumulative base</th><th>What makes it happen</th></tr>
-    <tr><td>Done · 28 Sep – 4 Oct</td><td class="n">$5,758</td><td class="n">—</td><td class="n">$386 selling phase</td><td class="n">10</td><td class="n">76</td><td class="n">10</td><td>Testing done, winners found</td></tr>
-    <tr><td>Week 2 · 5 – 11 Oct</td><td class="n">$12,000</td><td class="n">≤ $120</td><td class="n">≤ $250</td><td class="n">48</td><td class="n">218</td><td class="n">58</td><td>Sets frozen to exit learning; 2 new creator videos; Instagram feed cut if 0 seats Thu; allocation shift</td></tr>
-    <tr><td>Week 3 · 12 – 18 Oct</td><td class="n">$14,000</td><td class="n">≤ $60</td><td class="n">≤ $120</td><td class="n">117</td><td class="n">412</td><td class="n">175</td><td>Scale winners +20%/day; Advantage+ Sales duplicate of best set; Julie push; teachers push</td></tr>
-    <tr><td>Week 4 · 19 – 25 Oct</td><td class="n">$8,527</td><td class="n">≤ $45</td><td class="n">≤ $90</td><td class="n">95</td><td class="n">294</td><td class="n gold">270</td><td>Urgency creative ("this Monday"), retargeting pool at full size, email sequence</td></tr>
+    <tr><td>Done · 28 Sep – 4 Oct</td><td class="n">$5,758</td><td class="n">—</td><td class="n">$343 selling phase</td><td class="n">11</td><td class="n">76</td><td class="n">11</td><td>Testing done, winners found</td></tr>
+    <tr><td>Week 2 · 5 – 11 Oct</td><td class="n">$12,000</td><td class="n">≤ $120</td><td class="n">≤ $250</td><td class="n">48</td><td class="n">218</td><td class="n">59</td><td>Sets frozen to exit learning; 2 new creator videos; Instagram feed cut if 0 seats Thu; allocation shift</td></tr>
+    <tr><td>Week 3 · 12 – 18 Oct</td><td class="n">$14,000</td><td class="n">≤ $60</td><td class="n">≤ $120</td><td class="n">117</td><td class="n">412</td><td class="n">176</td><td>Scale winners +20%/day; Advantage+ Sales duplicate of best set; Julie push; teachers push</td></tr>
+    <tr><td>Week 4 · 19 – 25 Oct</td><td class="n">$8,527</td><td class="n">≤ $45</td><td class="n">≤ $90</td><td class="n">95</td><td class="n">294</td><td class="n gold">271</td><td>Urgency creative ("this Monday"), retargeting pool at full size, email sequence</td></tr>
     <tr><td>26 – 27 Oct · event</td><td class="n">$0 paid</td><td class="n">—</td><td class="n">organic only</td><td class="n">10–20</td><td class="n">—</td><td class="n gold">280–290</td><td>Last-call email, Julie story, groups</td></tr>
     <tr class="total"><td>Total</td><td class="n">$40,285</td><td class="n"></td><td class="n"></td><td class="n">280–290</td><td class="n">1,000</td><td class="n"></td><td></td></tr>
   </table></div>
-  <p class="note"><b style="color:var(--ink)">Base</b> = my forecast if the fixes hold. <b style="color:var(--ink)">Plan case</b> = the original CEO scenario ($55 → $34 → $29 per seat); we have not yet produced a day at that cost, so it is shown, not promised. Weeks 2–4 are capped at plan; this morning's set budgets total $1,895/day against a week-2 cap of $1,714/day, so $181/day comes off set 03 or 04 today unless you approve a six-day week.</p>
+  <p class="note"><b style="color:var(--ink)">Base</b> = my forecast if the fixes hold. <b style="color:var(--ink)">Plan case</b> = the original CEO scenario ($55 → $34 → $29 per seat); we have not yet produced a day at that cost, so it is shown, not promised. Weekly budgets are the CEO plan envelopes; inside each week the daily spend follows cost per seat: sets selling under the week's target are scaled +20% a day, sets without seats are cut at the Thursday gate. Faster than plan is allowed when cost per seat is under target.</p>
   <div class="foot"><span>Plan</span><span>11 / 14</span></div>
 </section>
 
@@ -365,7 +365,7 @@ ul.big li b{color:var(--gold);font-weight:700}
 <section class="slide" id="s12">
   <div class="kicker"><span class="no">11</span>Where we land</div>
   <div class="grid g3">
-    <div class="card reveal"><div class="lab">Base · 27 Oct</div><div class="big num gold">270–290</div><div class="sub">seats, $40,285 total, cost per seat trending $386 → $90. Range 200–350 depending on week-2 CPM.</div></div>
+    <div class="card reveal"><div class="lab">Base · 27 Oct</div><div class="big num gold">270–290</div><div class="sub">seats, $40,285 total, cost per seat trending $343 → $90. Range 200–350 depending on week-2 CPM.</div></div>
     <div class="card reveal"><div class="lab">To hit 500 · 27 Oct</div><div class="big num">$70</div><div class="sub">per seat average from today on the same budget. Set 04 ran at $196 in its first 36 hours; $70 needs CPM near $40 across the campaign.</div></div>
     <div class="card reveal"><div class="lab">14 Nov · 400 more</div><div class="big num blue">$22–32k</div><div class="sub">new budget at $55–80 per seat, not in the current plan. Two extra selling weeks help. Decision at Gate 3, Thu 22 Oct.</div></div>
   </div>
@@ -387,7 +387,7 @@ ul.big li b{color:var(--gold);font-weight:700}
     <tr><td>Gate 3 · Thu 22 Oct 17:00</td><td class="n">≤ $90</td><td class="n">≤ $45</td><td class="n">≥ 200</td><td>Approve November budget</td><td>$90–150: November at half</td><td>&gt; $150: no November paid plan</td></tr>
   </table></div>
   <div class="grid g3" style="margin-top:clamp(16px,2vw,28px)">
-    <div class="card reveal"><div class="lab">Every day · 08:00</div><div class="sub" style="font-size:var(--fs-m);color:var(--ink)">Email: seats total / yesterday / today, spend, CPM, cost per seat, what changed and why, non-paid activity, decisions pending.</div></div>
+    <div class="card reveal"><div class="lab">Every day · 08:00</div><div class="sub" style="font-size:var(--fs-m);color:var(--ink)">Email: seats total / yesterday / overnight, spend, CPM, cost per seat trend, what changed and why, non-paid activity, decisions pending.</div></div>
     <div class="card reveal"><div class="lab">Every Thursday · 17:00</div><div class="sub" style="font-size:var(--fs-m);color:var(--ink)">15-minute gate call with the table above filled in. You decide scale / hold / stop.</div></div>
     <div class="card reveal"><div class="lab">Every Monday</div><div class="sub" style="font-size:var(--fs-m);color:var(--ink)">CRM reconciliation: every Meta seat matched to a paid order and name. No unmatched seat is counted.</div></div>
   </div>
@@ -398,7 +398,7 @@ ul.big li b{color:var(--gold);font-weight:700}
 <section class="slide" id="s14">
   <div class="kicker"><span class="no">13</span>Five decisions I need from you this week</div>
   <ul class="big">
-    <li class="reveal"><b>Today:</b> approve the week-2 allocation (masterclass $12,000; Blueprint $1,050; leads $1,050; abandoned cart $280) and the $1,714/day cap.</li>
+    <li class="reveal"><b>Today:</b> approve the week-2 allocation (masterclass $12,000; Blueprint $1,050; leads $1,050; abandoned cart $280) and the rule: scale sets under $250 per seat, cut sets with no seats on Thursday.</li>
     <li class="reveal"><b>Today:</b> a date for Julie's own push (one post, one story, her audience). The cheapest seats we can get.</li>
     <li class="reveal"><b>Tue 6 Oct:</b> go for the teachers push to current students on Wed 7 Oct; script and tracked link are ready.</li>
     <li class="reveal"><b>Thu 8 Oct 17:00:</b> Gate 1 call. Scale, hold or stop on the numbers, not on feel.</li>
@@ -424,7 +424,7 @@ document.querySelectorAll('.bar-stack').forEach(b=>{const v=b.dataset.vals.split
 (function(){
  const days=['Mon 28','Tue 29','Wed 30','Thu 1','Fri 2','Sat 3','Sun 4'];
  const spend=[591,509,677,894,648,665,1774];
- const seats=[1,1,0,0,2,2,4];
+ const seats=[1,1,0,0,2,2,5];
  const phase=[0,0,0,0,1,1,1];
  const W=900,H=520,L=80,R=30,T=50,B=90;const iw=W-L-R, ih=H-T-B;const maxS=1900;
  const svg=document.getElementById('cps');let s='';
@@ -443,8 +443,8 @@ document.querySelectorAll('.bar-stack').forEach(b=>{const v=b.dataset.vals.split
  // phase brackets
  const xa=L+iw/7*0.19, xa2=L+iw/7*4-iw/7*0.19, xb=L+iw/7*4+iw/7*0.19, xb2=L+iw/7*7-iw/7*0.19;
  s+=`<line x1="${xa}" x2="${xa2}" y1="${T-22}" y2="${T-22}" stroke="oklch(60% 0.02 90)" stroke-width="3"/><text x="${(xa+xa2)/2}" y="${T-30}" text-anchor="middle" font-size="18" font-weight="700" fill="oklch(70% 0.02 90)">TESTING · $2,671 · 2 seats</text>`;
- s+=`<line x1="${xb}" x2="${xb2}" y1="${T-22}" y2="${T-22}" stroke="oklch(84% 0.14 85)" stroke-width="3"/><text x="${(xb+xb2)/2}" y="${T-30}" text-anchor="middle" font-size="18" font-weight="700" fill="oklch(84% 0.14 85)">SELLING · $3,087 · 8 seats</text>`;
- s+=`<text x="${L}" y="${H-6}" font-size="16" fill="oklch(64% 0.02 90)">● = one paid seat. Sunday includes the two overnight orders (01:00, 03:00 Monday).</text>`;
+ s+=`<line x1="${xb}" x2="${xb2}" y1="${T-22}" y2="${T-22}" stroke="oklch(84% 0.14 85)" stroke-width="3"/><text x="${(xb+xb2)/2}" y="${T-30}" text-anchor="middle" font-size="18" font-weight="700" fill="oklch(84% 0.14 85)">SELLING · $3,087 · 9 seats</text>`;
+ s+=`<text x="${L}" y="${H-6}" font-size="16" fill="oklch(64% 0.02 90)">● = one paid seat. Sunday includes the 3 orders of Monday morning (01:00, 03:00, 09:00) from Sunday's traffic.</text>`;
  svg.innerHTML=s;
 })();
 
