@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLA · Meta weekly report · Mon 28 Sep → Tue 6 Oct 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f2a4a;--navy2:#1f3a5f;--blue:#1f6fb2;--sky:#e9f1fa;--sky2:#d6e4f3;--ink:#0b1626;--ink2:#3a4a60;--ink3:#6b7a90;--green:#0f7b4f;--greenbg:#e3f5ea;--red:#b3261e;--redbg:#fbe6e4;--gold:#b7791f;--goldbg:#fff3dc;--line:#d7dfe9}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;font-feature-settings:"tnum" 1;line-height:1.3}
+.wrap{max-width:1500px;margin:0 auto;padding:0 clamp(18px,4vw,64px)}
+section{padding:clamp(40px,6vw,96px) 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.kicker{font-size:clamp(16px,1.2vw,20px);letter-spacing:.2em;text-transform:uppercase;color:var(--blue);font-weight:800;margin-bottom:14px}
+h1{font-family:"Instrument Serif",Georgia,serif;font-weight:500;letter-spacing:-.02em;line-height:1.02;font-size:clamp(44px,6vw,104px);color:var(--navy)}
+h2{font-family:"Instrument Serif",Georgia,serif;font-weight:500;letter-spacing:-.02em;line-height:1.05;font-size:clamp(36px,4vw,72px);color:var(--navy);margin-bottom:clamp(18px,2vw,32px);max-width:30ch}
+h2 b,h1 b{color:var(--blue);font-weight:500}
+h3{font-size:clamp(22px,1.7vw,30px);font-weight:800;color:var(--navy);margin:clamp(28px,3vw,44px) 0 14px}
+p,li{font-size:clamp(19px,1.45vw,25px);color:var(--ink2);line-height:1.4;max-width:70ch}
+p.lead{font-size:clamp(23px,1.8vw,32px);color:var(--ink);font-weight:500}
+ul{padding-left:1.1em}li{margin:.35em 0}
+.grid{display:grid;gap:clamp(12px,1.4vw,22px)}
+.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:1100px){.g5{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.g5,.g4,.g3,.g2{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.g5,.g4,.g3,.g2{grid-template-columns:1fr}}
+.card{background:var(--sky);border-radius:22px;padding:clamp(18px,2vw,30px)}
+.card .lab{font-size:clamp(15px,1.05vw,18px);font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.card .val{font-family:"Instrument Serif",serif;font-size:clamp(44px,4.2vw,76px);line-height:.95;color:var(--navy);letter-spacing:-.03em}
+.card .sub{font-size:clamp(16px,1.15vw,20px);color:var(--ink2);margin-top:10px;line-height:1.3}
+.card.good{background:var(--greenbg)}.card.good .val{color:var(--green)}
+.card.bad{background:var(--redbg)}.card.bad .val{color:var(--red)}
+.card.gold{background:var(--goldbg)}.card.gold .val{color:var(--gold)}
+.card.navy{background:var(--navy);color:#fff}.card.navy .val,.card.navy .lab,.card.navy .sub{color:#fff}.card.navy .lab{color:#9fc0e6}
+.hero{padding:clamp(48px,7vw,120px) 0 clamp(30px,4vw,60px)}
+.hero .meta{font-size:clamp(17px,1.2vw,21px);color:var(--ink3);margin-top:18px}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;margin-top:18px;font-size:clamp(16px,1.15vw,21px);overflow:hidden;border-radius:16px;border:1px solid var(--line)}
+.tbl th{background:var(--navy2);color:#fff;font-weight:700;text-align:right;padding:14px 12px;font-size:clamp(14px,.95vw,17px);line-height:1.2;vertical-align:bottom}
+.tbl th:first-child,.tbl td:first-child{text-align:left}
+.tbl td{padding:14px 12px;text-align:right;border-top:1px solid var(--line);color:var(--ink);font-weight:500;white-space:nowrap}
+.tbl td:first-child{font-weight:700;white-space:normal}
+.tbl tr.tot td{background:var(--sky2);font-weight:800}
+.tbl tr.good td{background:var(--greenbg)}.tbl tr.bad td{background:var(--redbg)}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.bar{display:flex;height:54px;border-radius:14px;overflow:hidden;margin:22px 0 10px;font-weight:800;color:#fff;font-size:clamp(15px,1.1vw,20px)}
+.bar div{display:flex;align-items:center;justify-content:center;white-space:nowrap}
+.legend{display:flex;gap:26px;flex-wrap:wrap;font-size:clamp(16px,1.1vw,20px);color:var(--ink2)}
+.legend i{display:inline-block;width:16px;height:16px;border-radius:4px;margin-right:8px;vertical-align:-2px}
+.headline{font-family:"Instrument Serif",serif;font-size:clamp(40px,5vw,88px);line-height:1;color:var(--green);letter-spacing:-.03em;margin:10px 0 18px}
+.chart{margin:26px 0 6px}
+.chart svg{width:100%;height:auto;display:block}
+.callout{border-left:8px solid var(--blue);background:var(--sky);padding:clamp(18px,2vw,28px);border-radius:0 18px 18px 0;margin:22px 0}
+.callout.warn{border-color:var(--red);background:var(--redbg)}
+.callout.ok{border-color:var(--green);background:var(--greenbg)}
+.callout p{max-width:none}
+.qa{display:grid;gap:14px;margin-top:10px}
+.qa div{background:var(--sky);border-radius:18px;padding:clamp(16px,1.8vw,26px)}
+.qa b{display:block;font-size:clamp(20px,1.5vw,26px);color:var(--navy);margin-bottom:8px}
+.tag{display:inline-block;font-size:clamp(13px,.9vw,15px);font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--sky2);color:var(--navy);margin-left:8px;vertical-align:middle}
+.tag.v{background:var(--greenbg);color:var(--green)}.tag.f{background:var(--goldbg);color:var(--gold)}.tag.a{background:var(--redbg);color:var(--red)}
+a.btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:clamp(17px,1.2vw,21px);padding:16px 24px;border-radius:14px;margin:8px 8px 8px 0}
+footer{padding:40px 0 80px;color:var(--ink3);font-size:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="hero">
+  <div class="kicker">Longevity Life Academy · Meta weekly report</div>
+  <h1>Mon 28 Sep → Tue 6 Oct 2026, 12:45<br><b>$15,234 spent · 15 masterclass sales · 23 checkouts opened · 122 form leads</b></h1>
+  <p class="meta">Every number on this page is read live from the Meta Marketing API (ad account act_1459085242361281, USD, Israel time) at 12:45 on 6 Oct. Sales = Meta-attributed purchases, confirmed by the pixel/CAPI dataset (same 15). Add-to-cart = a buyer opened the checkout and is captured in the CRM: a sales lead. <span class="tag v">Verified</span> = pulled this session. <span class="tag f">Forecast</span> = model with stated basis. <span class="tag a">Assumed</span> = not yet measured.</p>
+</section>
+
+<!-- ===================== 1 TOP LINE ===================== -->
+<section id="top">
+  <div class="kicker">1 · Top line</div>
+  <h2>Where the budget went and what each effort brought back</h2>
+  <div class="grid g4">
+    <div class="card navy"><div class="lab">Total Meta spend · 28 Sep → now</div><div class="val">$15,234</div><div class="sub">Live daily budget today: $2,182</div></div>
+    <div class="card"><div class="lab">Masterclass e-commerce · 60%</div><div class="val">$9,157</div><div class="sub"><b>15 sales · $885</b> · 23 add-to-carts · 21 initiate-checkouts · 977 landing views</div></div>
+    <div class="card"><div class="lab">Blueprint e-commerce · 18%</div><div class="val">$2,718</div><div class="sub"><b>0 purchases</b> · 11 add-to-carts · 2 form leads · 951 landing views</div></div>
+    <div class="card"><div class="lab">Leads (forms + cart recovery) · 22%</div><div class="val">$3,359</div><div class="sub"><b>122 form leads at $28</b> · 53 add-to-carts · 498 landing views</div></div>
+  </div>
+  <div class="bar">
+    <div style="width:60.1%;background:var(--navy)">Masterclass 60%</div>
+    <div style="width:17.8%;background:var(--blue)">Blueprint 18%</div>
+    <div style="width:22.1%;background:#5b8fc7">Leads 22%</div>
+  </div>
+  <div class="legend"><span><i style="background:var(--navy)"></i>Masterclass $9,157</span><span><i style="background:var(--blue)"></i>Blueprint $2,718</span><span><i style="background:#5b8fc7"></i>Leads $3,359</span></div>
+
+  <h3>What it brought — all metrics, 28 Sep → 6 Oct 12:45 <span class="tag v">Verified</span></h3>
+  <div class="scroll"><table class="tbl">
+    <tr><th>Effort</th><th>Spend $</th><th>Impressions</th><th>CPM $</th><th>Link clicks</th><th>Landing views</th><th>Add to cart</th><th>Initiate checkout</th><th>Purchases</th><th>Revenue $</th><th>Form leads</th><th>Open checkout leads</th><th>Total results*</th><th>Cost / purchase $</th><th>Cost / result $</th><th>Cost / ATC $</th><th>Cost / landing view $</th></tr>
+    <tr class="good"><td>Masterclass</td><td>9,157</td><td>52,959</td><td>173</td><td>1,054</td><td>977</td><td>23</td><td>21</td><td><b>15</b></td><td>885</td><td>0</td><td>8</td><td>23</td><td>610</td><td>398</td><td>398</td><td>9.37</td></tr>
+    <tr><td>Blueprint</td><td>2,718</td><td>84,168</td><td>32</td><td>1,179</td><td>951</td><td>11</td><td>2</td><td>0</td><td>0</td><td>2</td><td>11</td><td>13</td><td>—</td><td>209</td><td>247</td><td>2.86</td></tr>
+    <tr><td>Leads</td><td>3,359</td><td>22,345</td><td>150</td><td>1,425</td><td>498</td><td>53</td><td>1</td><td>0</td><td>0</td><td>122</td><td>53</td><td>175</td><td>—</td><td>19</td><td>63</td><td>6.75</td></tr>
+    <tr class="tot"><td>Total Meta</td><td>15,234</td><td>159,472</td><td>96</td><td>3,658</td><td>2,426</td><td>87</td><td>24</td><td>15</td><td>885</td><td>124</td><td>72</td><td>211</td><td>1,016</td><td>72</td><td>175</td><td>6.28</td></tr>
+  </table></div>
+  <p style="margin-top:12px;font-size:18px;color:var(--ink3)">*Total results = purchases + open checkout leads + form leads. Open checkout leads = add-to-cart minus purchases. Pipeline handed to the sales team this period: 122 form leads + 72 open checkout leads = <b>194 contacts</b>.</p>
+
+  <h3>Full month for context — 1 Sep → 6 Oct <span class="tag v">Verified</span></h3>
+  <div class="scroll"><table class="tbl">
+    <tr><th>Effort</th><th>Spend $</th><th>Impressions</th><th>CPM $</th><th>Landing views</th><th>Add to cart</th><th>Purchases</th><th>Revenue $</th><th>Form leads</th><th>Cost / purchase $</th><th>Cost / form lead $</th><th>Cost / ATC $</th></tr>
+    <tr><td>Masterclass (from 28 Sep)</td><td>9,157</td><td>52,959</td><td>173</td><td>977</td><td>23</td><td>15</td><td>885</td><td>0</td><td>610</td><td>—</td><td>398</td></tr>
+    <tr><td>Blueprint</td><td>15,508</td><td>477,533</td><td>32</td><td>6,232</td><td>81</td><td>3</td><td>537</td><td>5</td><td>5,169</td><td>—</td><td>191</td></tr>
+    <tr><td>Leads</td><td>23,906</td><td>146,085</td><td>164</td><td>2,169</td><td>160</td><td>0</td><td>0</td><td>1,026</td><td>—</td><td>23</td><td>149</td></tr>
+    <tr class="tot"><td>Total Meta</td><td>48,571</td><td>676,577</td><td>72</td><td>9,378</td><td>264</td><td>18</td><td>1,422</td><td>1,031</td><td>2,698</td><td>47</td><td>184</td></tr>
+  </table></div>
+</section>
+
+<!-- ===================== 2 WEEKLY ===================== -->
+<section id="weekly">
+  <div class="kicker">2 · Week by week, every effort</div>
+  <h2>Week 1 (Mon 28 Sep – Sun 4 Oct) vs. week 2 so far (Mon 5 Oct – Tue 6 Oct 12:45)</h2>
+  <div class="scroll"><table class="tbl">
+    <tr><th>Effort · week</th><th>Spend $</th><th>Spend / day $</th><th>Impressions</th><th>CPM $</th><th>Link clicks</th><th>Landing views</th><th>Add to cart</th><th>Initiate checkout</th><th>Purchases</th><th>Revenue $</th><th>Form leads</th><th>Cost / purchase $</th><th>Cost / ATC $</th><th>Cost / form lead $</th></tr>
+    <tr><td>Masterclass · week 1 (7 days)</td><td>5,764</td><td>823</td><td>46,561</td><td>124</td><td>661</td><td>596</td><td>13</td><td>13</td><td>8</td><td>452</td><td>—</td><td>720</td><td>443</td><td>—</td></tr>
+    <tr class="good"><td>Masterclass · week 2 so far (1.5 days)</td><td>3,393</td><td>2,262</td><td>6,398</td><td>530</td><td>393</td><td>381</td><td>10</td><td>8</td><td><b>7</b></td><td>433</td><td>—</td><td><b>485</b></td><td>339</td><td>—</td></tr>
+    <tr><td>Blueprint · week 1</td><td>2,284</td><td>326</td><td>82,983</td><td>28</td><td>1,144</td><td>917</td><td>9</td><td>2</td><td>0</td><td>0</td><td>2</td><td>—</td><td>254</td><td>1,142</td></tr>
+    <tr><td>Blueprint · week 2 so far</td><td>434</td><td>289</td><td>1,185</td><td>366</td><td>35</td><td>34</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>217</td><td>—</td></tr>
+    <tr><td>Leads · week 1</td><td>2,853</td><td>408</td><td>18,928</td><td>151</td><td>1,231</td><td>391</td><td>42</td><td>1</td><td>0</td><td>0</td><td>107</td><td>—</td><td>68</td><td>27</td></tr>
+    <tr><td>Leads · week 2 so far</td><td>507</td><td>338</td><td>3,417</td><td>148</td><td>194</td><td>107</td><td>11</td><td>0</td><td>0</td><td>0</td><td>15</td><td>—</td><td>46</td><td>34</td></tr>
+    <tr class="tot"><td>Total · week 1</td><td>10,900</td><td>1,557</td><td>148,472</td><td>73</td><td>3,036</td><td>1,904</td><td>64</td><td>16</td><td>8</td><td>452</td><td>109</td><td>1,363</td><td>170</td><td>100</td></tr>
+    <tr class="tot"><td>Total · week 2 so far</td><td>4,334</td><td>2,889</td><td>11,000</td><td>394</td><td>622</td><td>522</td><td>23</td><td>8</td><td>7</td><td>433</td><td>15</td><td>619</td><td>188</td><td>289</td></tr>
+  </table></div>
+  <div class="callout"><p><b>Read it in one line:</b> week 1 bought 8 masterclass sales at $720 each on a learning account; week 2 is buying them at $485 (and $266 today) because the budget was moved out of three audiences that never opened a checkout and into the two that do. Blueprint was cut to a $103/day holding budget (0 purchases on $2,718); Leads keeps producing form leads at $28–34.</p></div>
+</section>
+
+<!-- ===================== 3 MASTERCLASS TREND ===================== -->
+<section id="trend">
+  <div class="kicker">3 · Masterclass e-commerce — the trend</div>
+  <h2>The sales rate tripled in the last two and a half days</h2>
+  <div class="headline">7 sales in the last 37 hours · 9 of 15 since Saturday</div>
+  <div class="grid g5">
+    <div class="card"><div class="lab">28 Sep – 2 Oct · launch, 5 days</div><div class="val">4</div><div class="sub">sales · $3,319 · <b>$830 per sale</b> · 8 add-to-carts</div></div>
+    <div class="card"><div class="lab">3 – 4 Oct · restructure, 2 days</div><div class="val">4</div><div class="sub">sales · $2,444 · <b>$611 per sale</b> · 5 add-to-carts</div></div>
+    <div class="card good"><div class="lab">5 Oct · yesterday</div><div class="val">4</div><div class="sub">sales · $2,594 · <b>$649 per sale</b> · 6 add-to-carts</div></div>
+    <div class="card good"><div class="lab">6 Oct · today to 12:45</div><div class="val">3</div><div class="sub">sales · $799 · <b>$266 per sale</b> · 4 add-to-carts</div></div>
+    <div class="card navy"><div class="lab">Since launch</div><div class="val">15</div><div class="sub">sales · $9,157 · $610 per sale · 23 add-to-carts</div></div>
+  </div>
+
+  <div class="chart" aria-label="Daily masterclass sales and cost per sale">
+  <svg viewBox="0 0 1400 520" xmlns="http://www.w3.org/2000/svg" font-family="Inter,system-ui,sans-serif">
+    <!-- grid -->
+    <g stroke="#d7dfe9" stroke-width="2"><line x1="90" y1="420" x2="1380" y2="420"/><line x1="90" y1="320" x2="1380" y2="320" stroke-dasharray="6 8"/><line x1="90" y1="220" x2="1380" y2="220" stroke-dasharray="6 8"/><line x1="90" y1="120" x2="1380" y2="120" stroke-dasharray="6 8"/></g>
+    <g fill="#6b7a90" font-size="22" text-anchor="end"><text x="78" y="428">0</text><text x="78" y="328">1</text><text x="78" y="228">2</text><text x="78" y="128">3</text><text x="78" y="28">4</text></g>
+    <text x="90" y="30" fill="#0f2a4a" font-size="24" font-weight="800">Sales per day (bars) · cost per sale $ (labels)</text>
+    <!-- bars: x per day = 90 + i*143 ; width 100 ; height = sales*100 -->
+    <g>
+      <rect x="110" y="320" width="100" height="100" rx="10" fill="#9fc0e6"/><text x="160" y="455" text-anchor="middle" font-size="22" fill="#3a4a60">28 Sep</text><text x="160" y="490" text-anchor="middle" font-size="20" fill="#6b7a90">$591</text><text x="160" y="305" text-anchor="middle" font-size="30" font-weight="800" fill="#0f2a4a">1</text>
+      <rect x="253" y="320" width="100" height="100" rx="10" fill="#9fc0e6"/><text x="303" y="455" text-anchor="middle" font-size="22" fill="#3a4a60">29 Sep</text><text x="303" y="490" text-anchor="middle" font-size="20" fill="#6b7a90">$509</text><text x="303" y="305" text-anchor="middle" font-size="30" font-weight="800" fill="#0f2a4a">1</text>
+      <text x="446" y="455" text-anchor="middle" font-size="22" fill="#3a4a60">30 Sep</text><text x="446" y="490" text-anchor="middle" font-size="20" fill="#6b7a90">$677 · 0</text><text x="446" y="405" text-anchor="middle" font-size="30" font-weight="800" fill="#b3261e">0</text>
+      <text x="589" y="455" text-anchor="middle" font-size="22" fill="#3a4a60">1 Oct</text><text x="589" y="490" text-anchor="middle" font-size="20" fill="#6b7a90">$894 · 0</text><text x="589" y="405" text-anchor="middle" font-size="30" font-weight="800" fill="#b3261e">0</text>
+      <rect x="682" y="220" width="100" height="200" rx="10" fill="#9fc0e6"/><text x="732" y="455" text-anchor="middle" font-size="22" fill="#3a4a60">2 Oct</text><text x="732" y="490" text-anchor="middle" font-size="20" fill="#6b7a90">$324</text><text x="732" y="205" text-anchor="middle" font-size="30" font-weight="800" fill="#0f2a4a">2</text>
+      <rect x="825" y="220" width="100" height="200" rx="10" fill="#5b8fc7"/><text x="875" y="455" text-anchor="middle" font-size="22" fill="#3a4a60">3 Oct</text><text x="875" y="490" text-anchor="middle" font-size="20" fill="#6b7a90">$333</text><text x="875" y="205" text-anchor="middle" font-size="30" font-weight="800" fill="#0f2a4a">2</text>
+      <rect x="968" y="220" width="100" height="200" rx="10" fill="#5b8fc7"/><text x="1018" y="455" text-anchor="middle" font-size="22" fill="#3a4a60">4 Oct</text><text x="1018" y="490" text-anchor="middle" font-size="20" fill="#6b7a90">$889</text><text x="1018" y="205" text-anchor="middle" font-size="30" font-weight="800" fill="#0f2a4a">2</text>
+      <rect x="1111" y="20" width="100" height="400" rx="10" fill="#0f7b4f"/><text x="1161" y="455" text-anchor="middle" font-size="22" fill="#3a4a60">5 Oct</text><text x="1161" y="490" text-anchor="middle" font-size="20" fill="#6b7a90">$649</text><text x="1161" y="60" text-anchor="middle" font-size="30" font-weight="800" fill="#fff">4</text>
+      <rect x="1254" y="120" width="100" height="300" rx="10" fill="#0f7b4f"/><text x="1304" y="455" text-anchor="middle" font-size="22" fill="#3a4a60">6 Oct ½</text><text x="1304" y="490" text-anchor="middle" font-size="20" fill="#6b7a90">$266</text><text x="1304" y="160" text-anchor="middle" font-size="30" font-weight="800" fill="#fff">3</text>
+    </g>
+  </svg>
+  </div>
+
+  <h3>Day by day, all metrics <span class="tag v">Verified</span></h3>
+  <div class="scroll"><table class="tbl">
+    <tr><th>Date</th><th>Spend $</th><th>Impressions</th><th>CPM $</th><th>Link clicks</th><th>Landing views</th><th>Add to cart</th><th>Initiate checkout</th><th>Purchases</th><th>Revenue $</th><th>Cost / purchase $</th><th>Cost / ATC $</th><th>Cost / landing view $</th></tr>
+    <tr><td>Mon 28 Sep</td><td>591</td><td>2,022</td><td>292</td><td>53</td><td>47</td><td>1</td><td>1</td><td>1</td><td>79</td><td>591</td><td>591</td><td>12.58</td></tr>
+    <tr><td>Tue 29 Sep</td><td>509</td><td>1,218</td><td>418</td><td>25</td><td>24</td><td>2</td><td>2</td><td>1</td><td>49</td><td>509</td><td>255</td><td>21.22</td></tr>
+    <tr><td>Wed 30 Sep</td><td>677</td><td>1,842</td><td>367</td><td>36</td><td>34</td><td>2</td><td>2</td><td>0</td><td>0</td><td>—</td><td>338</td><td>19.91</td></tr>
+    <tr><td>Thu 1 Oct</td><td>894</td><td>5,939</td><td>150</td><td>82</td><td>69</td><td>1</td><td>1</td><td>0</td><td>0</td><td>—</td><td>894</td><td>12.95</td></tr>
+    <tr><td>Fri 2 Oct</td><td>648</td><td>4,650</td><td>139</td><td>52</td><td>46</td><td>2</td><td>2</td><td>2</td><td>128</td><td>324</td><td>324</td><td>14.09</td></tr>
+    <tr><td>Sat 3 Oct · restructure</td><td>665</td><td>26,375</td><td>25</td><td>221</td><td>192</td><td>2</td><td>2</td><td>2</td><td>98</td><td>333</td><td>333</td><td>3.47</td></tr>
+    <tr><td>Sun 4 Oct</td><td>1,779</td><td>4,515</td><td>394</td><td>192</td><td>184</td><td>3</td><td>3</td><td>2</td><td>98</td><td>889</td><td>593</td><td>9.67</td></tr>
+    <tr class="good"><td>Mon 5 Oct · consolidation</td><td>2,594</td><td>5,110</td><td>508</td><td>302</td><td>292</td><td>6</td><td>5</td><td>4</td><td>286</td><td>649</td><td>432</td><td>8.88</td></tr>
+    <tr class="good"><td>Tue 6 Oct · to 12:45</td><td>799</td><td>1,288</td><td>620</td><td>91</td><td>89</td><td>4</td><td>3</td><td>3</td><td>147</td><td>266</td><td>200</td><td>8.98</td></tr>
+    <tr class="tot"><td>Total 28 Sep → now</td><td>9,157</td><td>52,959</td><td>173</td><td>1,054</td><td>977</td><td>23</td><td>21</td><td>15</td><td>885</td><td>610</td><td>398</td><td>9.37</td></tr>
+  </table></div>
+
+  <h3>What happened, in order</h3>
+  <ul>
+    <li><b>28 Sep – 2 Oct, launch.</b> Two ad sets, 45–64 interest audiences, static banners plus Julie's 65-second film. CPM $140–420. 4 sales, $830 each. Diagnosis: reach is the constraint — the audience Meta could find at that targeting cost 20–30× the Facebook-feed market, and the landing page converted 2.4% of visitors to checkout either way.</li>
+    <li><b>3 Oct, restructure.</b> 64 ads switched off, 8 removed, 27 new ads created (presenter UGC videos and 9:16 Reels videos). Six ad sets: 03 and 04 widened to 35–65. Placements cut to Facebook feed, Facebook Reels and Instagram feed. The Reels-overlay placement bought 28,997 impressions at $9.6 CPM that day — 193 visits, 1 checkout open, 0 sales — and was removed the same evening: cheap reach without intent does not convert.</li>
+    <li><b>4 – 6 Oct, consolidation.</b> Budget moved into the two sets that open checkouts: set 04 (UGC) $150 → $579/day, set 03 (Julie film) $199 → $459/day. Sets 01, 06 cut; Blueprint cut to $103/day. Inside set 04 the two non-selling UGC videos were paused; only the two that sell run. Result: 9 sales in 2.5 days, today at $266 per sale.</li>
+  </ul>
+</section>
+
+<!-- ===================== 4 DRILL-DOWN ===================== -->
+<section id="drill">
+  <div class="kicker">4 · Masterclass drill-down</div>
+  <h2>Every ad set, with every add-to-cart counted as a lead</h2>
+  <div class="scroll"><table class="tbl">
+    <tr><th>Ad set</th><th>Spend $</th><th>CPM $</th><th>Landing views</th><th>Add to cart</th><th>Initiate checkout</th><th>Purchases</th><th>Revenue $</th><th>Open checkout leads</th><th>Total results</th><th>Cost / purchase $</th><th>Cost / result $</th><th>Yesterday spend / sales / ATC</th><th>Today spend / sales / ATC</th><th>Budget now $/day</th><th>Decision</th></tr>
+    <tr class="good"><td>Set 04 · 35–65 · UGC videos</td><td>1,369</td><td>73</td><td>267</td><td>7</td><td>6</td><td><b>6</b></td><td>324</td><td>1</td><td>7</td><td><b>228</b></td><td>196</td><td>$699 / 2 / 2</td><td>$278 / 2 / 3</td><td>579</td><td>Scale</td></tr>
+    <tr class="good"><td>Set 03 · 35–65 · Julie 65-sec film</td><td>2,510</td><td>134</td><td>294</td><td>8</td><td>6</td><td><b>4</b></td><td>256</td><td>4</td><td>8</td><td>627</td><td>314</td><td>$716 / 2 / 4</td><td>$167 / 0 / 0</td><td>459</td><td>Scale</td></tr>
+    <tr><td>Set 05 · 35–65 · top-10% income</td><td>640</td><td>147</td><td>97</td><td>1</td><td>1</td><td>1</td><td>49</td><td>0</td><td>1</td><td>640</td><td>640</td><td>$255 / 0 / 0</td><td>$68 / 1 / 1</td><td>222</td><td>Hold, watch 48 h</td></tr>
+    <tr><td>Set 01 · 45–64 interests</td><td>3,035</td><td>425</td><td>157</td><td>7</td><td>7</td><td>4</td><td>256</td><td>3</td><td>7</td><td>759</td><td>434</td><td>$444 / 0 / 0</td><td>$138 / 0 / 0</td><td>266</td><td>Cut to $100</td></tr>
+    <tr class="bad"><td>Set 02 · retargeting (14 audiences)</td><td>768</td><td>346</td><td>38</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td><td>$118 / 0 / 0</td><td>$35 / 0 / 0</td><td>70</td><td>Hold at $20</td></tr>
+    <tr class="bad"><td>Set 06 · 45–64 · video</td><td>834</td><td>470</td><td>123</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td><td>$363 / 0 / 0</td><td>$113 / 0 / 0</td><td>149</td><td>Pause</td></tr>
+    <tr class="tot"><td>Masterclass total</td><td>9,157</td><td>173</td><td>977</td><td>23</td><td>21</td><td>15</td><td>885</td><td>8</td><td>23</td><td>610</td><td>398</td><td>$2,594 / 4 / 6</td><td>$799 / 3 / 4</td><td>1,745</td><td></td></tr>
+  </table></div>
+
+  <h3>The ads that sell <span class="tag v">Verified</span></h3>
+  <div class="grid g4">
+    <div class="card good"><div class="lab">UGC · Woman · Five habits (set 04)</div><div class="val">$115</div><div class="sub">per sale · $345 → 3 sales, 3 add-to-carts</div></div>
+    <div class="card good"><div class="lab">UGC · Man · Deadlier than smoking (set 04)</div><div class="val">$312</div><div class="sub">per sale · $936 → 3 sales, 4 add-to-carts</div></div>
+    <div class="card"><div class="lab">Julie 65-sec film (set 03)</div><div class="val">$630</div><div class="sub">per sale · $1,891 → 3 sales, 6 add-to-carts</div></div>
+    <div class="card bad"><div class="lab">Static banners, all sets</div><div class="val">$1,000+</div><div class="sub">per sale · ~$2,000 → 2 sales · switched off</div></div>
+  </div>
+  <h3>Where the sales come from <span class="tag v">Verified</span></h3>
+  <div class="grid g4">
+    <div class="card good"><div class="lab">Facebook Reels</div><div class="val">9</div><div class="sub">sales on $4,052 · $450 per sale · 11 add-to-carts</div></div>
+    <div class="card"><div class="lab">Facebook feed</div><div class="val">6</div><div class="sub">sales on $3,689 · $615 per sale · 11 add-to-carts</div></div>
+    <div class="card bad"><div class="lab">Instagram (feed, Stories, Reels)</div><div class="val">0</div><div class="sub">sales on $1,004 · 0 add-to-carts</div></div>
+    <div class="card bad"><div class="lab">Reels overlay (removed 3 Oct)</div><div class="val">0</div><div class="sub">sales on $278 · 28,997 impressions · 193 visits</div></div>
+  </div>
+</section>
+
+<!-- ===================== 5 FORECAST ===================== -->
+<section id="plan">
+  <div class="kicker">5 · Budget, forecast and plan</div>
+  <h2>One budget — the original <b>$40,813</b> — for both events. Nothing added.</h2>
+  <div class="grid g4">
+    <div class="card navy"><div class="lab">Approved masterclass envelope</div><div class="val">$40,813</div><div class="sub">The CEO plan of 27 Sep. No $30k November add-on, no $70–75k. Blueprint and Leads spend is outside this envelope.</div></div>
+    <div class="card"><div class="lab">Spent on masterclass so far</div><div class="val">$9,157</div><div class="sub">28 Sep → 6 Oct 12:45 · 22% of the envelope · 15 sales</div></div>
+    <div class="card"><div class="lab">Left to spend</div><div class="val">$31,656</div><div class="sub">For 6 Oct → 13 Nov (38 days) · $833 per day on average</div></div>
+    <div class="card gold"><div class="lab">Why today's pace cannot continue</div><div class="val">18 days</div><div class="sub">At the live $1,745/day the envelope runs out on 24 Oct. The plan below steps spend down and efficiency up.</div></div>
+  </div>
+
+  <h3>Daily spend plan and expected sales <span class="tag f">Forecast</span></h3>
+  <div class="scroll"><table class="tbl">
+    <tr><th>Phase</th><th>Days</th><th>Spend / day $</th><th>Spend $</th><th>Cost per sale $ (planned)</th><th>Sales / day</th><th>Sales</th><th>Cumulative sales</th><th>Basis for the cost per sale</th></tr>
+    <tr><td>Done · 28 Sep – 6 Oct 12:45</td><td>8.5</td><td>1,077</td><td>9,157</td><td>610 (actual)</td><td>1.8</td><td>15</td><td>15</td><td style="white-space:normal">Verified</td></tr>
+    <tr><td>A · rest of 6 Oct – Sun 12 Oct</td><td>6.5</td><td>1,300</td><td>8,300</td><td>250</td><td>5.1</td><td>33</td><td>48</td><td style="white-space:normal">Today $266; set 04 $228 over 9 days; budget only in sets 03 / 04 / 05</td></tr>
+    <tr><td>B · Mon 13 Oct – Sun 26 Oct</td><td>14</td><td>800</td><td>11,200</td><td>170</td><td>4.7</td><td>66</td><td>114</td><td style="white-space:normal">UGC-only mix (two ads at $115 / $312), 3–4 new UGC variants, 9:16 Reels versions, sets exit learning</td></tr>
+    <tr><td>Mon 27 Oct · checkpoint</td><td>1</td><td>400</td><td>400</td><td>170</td><td>2.4</td><td>2</td><td><b>116</b></td><td style="white-space:normal">Same as B</td></tr>
+    <tr><td>C · Tue 28 Oct – Thu 12 Nov</td><td>16</td><td>700</td><td>11,200</td><td>130</td><td>5.4</td><td>86</td><td>202</td><td style="white-space:normal">Event-1 proof content; warm pool large enough to retarget</td></tr>
+    <tr class="tot"><td>Total to 13 Nov</td><td>46</td><td>875</td><td><b>40,257</b></td><td>199</td><td>4.4</td><td>187 more</td><td><b>202</b></td><td style="white-space:normal">Inside $40,813</td></tr>
+  </table></div>
+
+  <div class="grid g3" style="margin-top:22px">
+    <div class="card"><div class="lab">Paid sales by 27 Oct <span class="tag f">Forecast</span></div><div class="val">≈ 115</div><div class="sub">Range 90 – 125. Low = cost per sale stays at today's $266; high = $150 from 13 Oct.</div></div>
+    <div class="card"><div class="lab">Paid sales by 13 Nov <span class="tag f">Forecast</span></div><div class="val">≈ 200</div><div class="sub">Range 130 – 280. Low = $266 flat; high = $100 from 13 Oct onward.</div></div>
+    <div class="card"><div class="lab">This week · 6 – 12 Oct <span class="tag f">Forecast</span></div><div class="val">4 – 6 / day</div><div class="sub">$1,300/day on sets 03 / 04 / 05 at $220 – 330 per sale.</div></div>
+  </div>
+
+  <div class="callout warn">
+    <p><b>Straight answer on 500 – 600 sign-ups.</b> Paid Meta inside the $40,813 envelope is forecast at ≈ 200 by 13 Nov. Reaching 500 from paid alone would need $65 per sale on the remaining budget — today's best ad does $115, the best set $228. The data does not support promising 500 from ads. What the data does support: <b>≈ 200 paid + conversion of the lead base we already own</b> — 1,148 form leads (1,026 in September + 122 this week) and 246 open checkout leads (people who opened a checkout and did not pay), about 1,400 contacts, plus the LLA e-mail base and the Facebook-group distribution. At a 7 – 10% lead-to-ticket conversion through e-mail sequences and the sales team that adds 100 – 140 <span class="tag a">Assumed</span>; 500 needs ≈ 20% of the lead base or paid at $100 per sale from 13 Oct. Those two numbers — $100 per sale and 20% lead conversion — are the two things the plan must prove, and the gates below say when.</p>
+  </div>
+
+  <h3>What we keep doing, stop doing, and the gates</h3>
+  <div class="grid g3">
+    <div class="card good"><div class="lab">Keep</div><div class="sub" style="font-size:clamp(18px,1.3vw,22px)">Sets 03 and 04 untouched in settings (Meta needs ~50 purchase events to leave learning; we are at 15). Budget rises only where checkouts open. Daily pruning of ads with spend and no add-to-cart. Facebook feed + Reels as the delivery core. Pixel/CAPI frozen (GOLDEN CAPI) so every number here stays trustworthy.</div></div>
+    <div class="card bad"><div class="lab">Stop — today</div><div class="sub" style="font-size:clamp(18px,1.3vw,22px)">Set 06: $834, 0 sales, 0 add-to-carts, $470 CPM → pause. Set 02 retargeting: $768, 0 add-to-carts, pool under 1,000 visitors → $20/day. Set 01: $3,035, 4 sales, but $581 and 0 add-to-carts in 48 h → $100/day, pause 8 Oct if still 0. Frees ≈ $460/day. Reversible in one click; sets 03/04 not edited, so no review risk.</div></div>
+    <div class="card gold"><div class="lab">Gates</div><div class="sub" style="font-size:clamp(18px,1.3vw,22px)"><b>Wed 8 Oct:</b> ≥ 8 sales from 6 Oct at ≤ $300 → phase A confirmed. <b>Mon 13 Oct:</b> 7-day cost per sale ≤ $200 with new UGC live → phase B at $800/day; if not, $600/day and creative only. <b>Mon 20 Oct:</b> lead-base e-mail + call conversion measured on the first 500 contacts → sets the 13 Nov commitment. Each gate reports spend, sales, add-to-carts by set, same day.</div></div>
+  </div>
+
+  <h3>Next actions this week</h3>
+  <ul>
+    <li>3 – 4 new UGC variants (same two presenters, new hooks) duplicated into set 04 — the only format under $350 per sale. Live by Thu 9 Oct.</li>
+    <li>9:16 vertical versions with sound of the two selling UGCs and Julie's film for Facebook Reels, where 9 of 15 sales came from.</li>
+    <li>Sales team and e-mail: the 8 open masterclass checkout leads and 11 Blueprint checkout leads this week, then the 1,148 form leads with a dated masterclass sequence. First measured conversion by 20 Oct.</li>
+    <li>A broad 35–65 duplicate of set 04 (Meta's own Advantage+ audience recommendation for this account) once set 04 passes 50 events — the scale lever for phases B and C.</li>
+  </ul>
+</section>
+
+<!-- ===================== 6 Q&A ===================== -->
+<section id="qa">
+  <div class="kicker">6 · The questions you will get</div>
+  <h2>Answers with the numbers behind them</h2>
+  <div class="qa">
+    <div><b>How many masterclass sales since launch?</b>15 (4 launch week, 4 on 3–4 Oct, 4 yesterday, 3 today by 12:45). Revenue $885. All 15 are in Ads Manager and in the pixel/CAPI dataset. <span class="tag v">Verified</span></div>
+    <div><b>What did we spend and on what?</b>$15,234 since 28 Sep: Masterclass $9,157 (60%), Blueprint $2,718 (18%), Leads $3,359 (22%). Full month 1 Sep → now: $48,571. <span class="tag v">Verified</span></div>
+    <div><b>Why is cost per sale $610 if the plan said $70–160?</b>The plan assumed market CPM ($8–16). The account paid $173 average and $350–470 in the 45–64 interest audiences. Reach, not the page, was the constraint: landing view → checkout open is 2.4% everywhere. Fixed by widening to 35–65 and moving to UGC/Reels: set 04 runs at $73 CPM and $228 per sale; today is $266. <span class="tag v">Verified</span></div>
+    <div><b>Why believe the trend?</b>9 of 15 sales came in the last 2.5 days, after the budget moved to sets 03/04. Same page, same offer, same pixel; only the audience and creative changed. Caveat we state ourselves: 15 sales is a small sample, so we decide on sales + add-to-carts together over 48 h, with the 8 Oct and 13 Oct gates. <span class="tag v">Verified</span></div>
+    <div><b>What is the spend per day this week and how many sales?</b>$1,300/day on sets 03 / 04 / 05 (down from $1,745 after pausing 06 and cutting 01/02). 4 – 6 sales per day at $220 – 330. <span class="tag f">Forecast</span></div>
+    <div><b>How many sales by 27 Oct? By 13 Nov?</b>Paid: ≈ 115 by 27 Oct (range 75 – 150) and ≈ 200 by 13 Nov (range 130 – 280), spending $40,257 of the $40,813. Plus lead-base conversion: 100 – 140 at 7 – 10% <span class="tag a">Assumed</span>, measured by 20 Oct. <span class="tag f">Forecast</span></div>
+    <div><b>Where is the $70–75k coming from?</b>Nowhere. The only envelope is the $40,813 approved on 27 Sep; it covers both events. Blueprint and Leads campaigns are separate budgets and are at holding levels ($103/day and $334/day).</div>
+    <div><b>Why not just put more money in now that it works?</b>Because the envelope would be gone by 24 Oct at $1,745/day, and because sets 03/04 are still in learning (15 of ~50 events); Meta penalises large budget jumps on learning sets with higher costs. We step spend down to $800/day from 13 Oct and buy sales cheaper, not more expensive.</div>
+    <div><b>What about the lead campaigns — 1,026 leads in September, what did they produce?</b>1,026 instant-form leads at $23 and 160 checkout opens on $23,906. Their masterclass conversion is not yet measured; the plan makes them the second engine (e-mail sequence + sales calls) and measures it by 20 Oct. <span class="tag v">Verified</span> spend and counts; conversion <span class="tag a">Assumed</span>.</div>
+    <div><b>Is the tracking right?</b>Purchases match 1:1 between Ads Manager and the pixel/CAPI dataset. Meta's own recommendation tab flags that our Purchase server events lack the click-ID (fbc) match key, which can under-report conversions; tracking is frozen until 26 Oct (GOLDEN CAPI) and this is the first fix after the freeze. <span class="tag v">Verified</span></div>
+    <div><b>What does a $49 ticket pay back?</b>On its own, nothing at $200+ per sale. The masterclass is the front end: every buyer and every open checkout lead is a qualified prospect for The Longevity Blueprint ($279–289/month); that conversion is the sales team's number, not Meta's.</div>
+  </div>
+</section>
+
+<!-- ===================== 7 FILES ===================== -->
+<section id="files">
+  <div class="kicker">7 · Files and method</div>
+  <h2>Everything on this page, in Excel</h2>
+  <a class="btn" href="LLA_Meta_CEO_Pack_v2_2026-10-06.xlsx">Excel pack · reads left-to-right in Hebrew preview</a>
+  <a class="btn" href="LLA_Meta_CEO_Pack_v2_2026-10-06_desktop.xlsx">Excel pack · desktop version</a>
+  <a class="btn" href="../">Previous CEO launch report</a>
+  <p style="margin-top:22px">Method: Meta Marketing API v25.0, ad account act_1459085242361281, pulled 6 Oct 2026 12:45 IDT. Daily ad-set and ad-level insights, unified attribution (7-day click / 1-day view), impression date. Placement breakdown by publisher platform × position. Purchases cross-checked against pixel/CAPI dataset 1440305917310328 (same 15) and conversion-date reporting. Efforts: Masterclass = campaign #118149; Blueprint = #118148; Leads = #117186 (instant forms) + #116622 (add-to-cart sets). Budgets and statuses read live from ad-set objects; changes from the account activity log. Not included: CRM/payment reconciliation, sales-call outcomes, Blueprint upsell from masterclass buyers. Test ad sets spent $0.01.</p>
+</section>
+
+<footer>Longevity Life Academy · Meta weekly report · generated 6 Oct 2026 12:45 IDT · gitteromri-ux/julie-ceo-launch-report</footer>
+</div>
+</body>
+</html>
