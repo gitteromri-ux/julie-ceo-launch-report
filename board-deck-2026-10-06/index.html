@@ -1,176 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Longevity Life Academy · Board deck · 6 Oct 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#0f2a4a;--navy2:#163a63;--blue:#1f6fb2;--sky:#eaf2fb;--sky2:#d5e4f4;--ink:#0b1626;--ink2:#334459;--ink3:#6b7a90;--green:#0f7b4f;--greenbg:#dff3e7;--red:#b3261e;--redbg:#fbe3e1;--gold:#b7791f;--goldbg:#fff1d6;--line:#d7dfe9}
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Longevity Life Academy · Board deck · 6 Oct 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
+:root{--navy:#0f2a4a;--blue:#1f6fb2;--sky:#eaf2fb;--sky2:#d5e4f4;--ink:#0b1626;--ink2:#334459;--ink3:#6b7a90;--green:#0f7b4f;--greenbg:#dff3e7;--red:#b3261e;--redbg:#fbe3e1;--gold:#b7791f;--goldbg:#fff1d6}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#e9edf3;font-family:Inter,system-ui,sans-serif;color:var(--ink);font-feature-settings:"tnum" 1}
 #deck{width:1920px;margin:0 auto;padding:24px 0 80px}
 .slide{width:1920px;height:1080px;background:#fff;position:relative;overflow:hidden;padding:64px 84px 60px;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(15,42,74,.15);border-radius:6px}
-.slide+.slide{margin-top:0}
-.kicker{font-size:22px;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);font-weight:800;margin-bottom:10px}
-h1{font-family:"Instrument Serif",Georgia,serif;font-weight:500;letter-spacing:-.02em;line-height:1;font-size:72px;color:var(--navy)}
-h1 b{color:var(--blue);font-weight:500}
-h2{font-size:30px;font-weight:800;color:var(--navy);letter-spacing:-.01em}
-.sub{font-size:26px;color:var(--ink2);margin-top:12px;line-height:1.35}
-.foot{position:absolute;left:84px;right:84px;bottom:28px;display:flex;justify-content:space-between;font-size:18px;color:var(--ink3)}
-.foot b{color:var(--navy)}
+.kicker{font-size:22px;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);font-weight:800;margin-bottom:12px}
+h1{font-family:"Instrument Serif",Georgia,serif;font-weight:500;letter-spacing:-.02em;line-height:1;font-size:74px;color:var(--navy)}
+.sub{font-size:28px;color:var(--ink2);margin-top:14px;line-height:1.3}
+.foot{position:absolute;left:84px;right:84px;bottom:26px;display:flex;justify-content:space-between;font-size:18px;color:var(--ink3)}
 ul.big{list-style:none;display:grid;gap:30px}
-ul.big li{font-size:34px;line-height:1.25;color:var(--ink);padding-left:64px;position:relative;font-weight:500}
-ul.big li::before{content:attr(data-n);position:absolute;left:0;top:2px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;font-size:22px;display:grid;place-items:center}
+ul.big li{font-size:33px;line-height:1.32;color:var(--ink);padding-left:70px;position:relative}
+ul.big li::before{content:attr(data-n);position:absolute;left:0;top:4px;width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;font-size:24px;display:grid;place-items:center}
 ul.big li b{color:var(--navy);font-weight:800}
-.lab{font-size:16px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px}
-.tag{display:inline-block;font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--sky2);color:var(--navy)}
-.tag.sold{background:var(--greenbg);color:var(--green)}.tag.live{background:var(--sky2);color:var(--navy)}.tag.res{background:var(--goldbg);color:var(--gold)}.tag.off{background:var(--redbg);color:var(--red)}
-/* media frames */
-.phone{background:#0b0f16;border-radius:34px;padding:8px;position:relative;box-shadow:0 18px 40px rgba(0,0,0,.25)}
-.phone .scr{border-radius:27px;overflow:hidden;background:#000;position:relative;width:100%;height:100%}
-.phone video,.phone img{width:100%;height:100%;object-fit:cover;display:block}
-.phone .notch{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:34%;height:16px;background:#0b0f16;border-radius:0 0 12px 12px;z-index:2}
-.laptop{position:relative}
-.laptop .bezel{background:#0b0f16;border-radius:22px 22px 10px 10px;padding:16px 16px 18px;box-shadow:0 24px 60px rgba(0,0,0,.28)}
-.laptop .screen{background:#000;border-radius:10px;overflow:hidden;position:relative}
-.laptop video,.laptop img{width:100%;height:100%;object-fit:cover;display:block}
-.laptop .base{height:22px;background:linear-gradient(#cfd5de,#aab3c0);border-radius:0 0 18px 18px;margin:0 -40px}
-.sq{border-radius:16px;overflow:hidden;background:#000;position:relative;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.tag{display:inline-block;font-size:18px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-radius:999px;background:var(--sky2);color:var(--navy);vertical-align:middle;margin-left:10px}
+.tag.sold{background:var(--greenbg);color:var(--green)}.tag.res{background:var(--goldbg);color:var(--gold)}.tag.off{background:var(--redbg);color:var(--red)}
+.phone{background:#0b0f16;border-radius:44px;padding:10px;position:relative;box-shadow:0 22px 50px rgba(0,0,0,.28)}
+.phone .scr{border-radius:35px;overflow:hidden;background:#000;width:100%;height:100%;position:relative}
+.phone video{width:100%;height:100%;object-fit:cover;display:block}
+.phone .notch{position:absolute;top:18px;left:50%;transform:translateX(-50%);width:34%;height:20px;background:#0b0f16;border-radius:0 0 14px 14px;z-index:2}
+.laptop .bezel{background:#0b0f16;border-radius:26px 26px 12px 12px;padding:18px 18px 20px;box-shadow:0 26px 70px rgba(0,0,0,.3)}
+.laptop .screen{background:#000;border-radius:12px;overflow:hidden;position:relative;aspect-ratio:16/9}
+.laptop video{width:100%;height:100%;object-fit:cover;display:block}
+.laptop .base{height:24px;background:linear-gradient(#cfd5de,#aab3c0);border-radius:0 0 20px 20px;margin:0 -44px}
+.sq{border-radius:18px;overflow:hidden;background:#000;position:relative;box-shadow:0 12px 34px rgba(0,0,0,.2)}
 .sq img,.sq video{width:100%;height:100%;object-fit:cover;display:block}
-.cap{font-size:19px;color:var(--ink2);margin-top:10px;line-height:1.25;text-align:center;font-weight:600}
-.cap small{display:block;color:var(--ink3);font-weight:500;font-size:15px;margin-top:3px}
-.snd{position:absolute;right:10px;bottom:10px;z-index:3;background:rgba(255,255,255,.92);color:var(--navy);border:0;border-radius:999px;padding:7px 12px;font:800 13px Inter;cursor:pointer}
-/* KPI */
-.kpi{background:var(--sky);border-radius:20px;padding:16px 20px}
-.kpi .v{font-family:"Instrument Serif",serif;font-size:54px;line-height:.95;color:var(--navy);letter-spacing:-.03em}
-.kpi .l{font-size:16px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px}
-.kpi .s{font-size:17px;color:var(--ink2);margin-top:8px;line-height:1.3}
+.cap{font-size:24px;color:var(--ink2);margin-top:14px;line-height:1.25;text-align:center;font-weight:600}
+.snd{position:absolute;right:14px;bottom:14px;z-index:3;background:rgba(255,255,255,.94);color:var(--navy);border:0;border-radius:999px;padding:10px 16px;font:800 16px Inter;cursor:pointer}
+.kpi{background:var(--sky);border-radius:22px;padding:22px 26px}
+.kpi .v{font-family:"Instrument Serif",serif;font-size:66px;line-height:.95;color:var(--navy);letter-spacing:-.03em}
+.kpi .l{font-size:17px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px}
+.kpi .s{font-size:19px;color:var(--ink2);margin-top:10px;line-height:1.3}
 .kpi.g{background:var(--greenbg)}.kpi.g .v{color:var(--green)}
 .kpi.n{background:var(--navy)}.kpi.n .v,.kpi.n .s{color:#fff}.kpi.n .l{color:#9fc0e6}
-/* columns */
-.col{background:var(--sky);border-radius:24px;padding:24px 26px;display:flex;flex-direction:column}
-.col h2{font-size:30px;margin-bottom:4px}
-.col .st{font-size:18px;color:var(--ink3);font-weight:700;margin-bottom:10px}
-.col ul{list-style:none;display:grid;gap:16px}
-.col li{font-size:24px;line-height:1.3;color:var(--ink);padding-left:30px;position:relative}
-.col li::before{content:"";position:absolute;left:0;top:11px;width:14px;height:14px;border-radius:50%;background:var(--blue)}
-.col li b{color:var(--navy);font-weight:800}
-.col .num{font-family:"Instrument Serif",serif;font-size:38px;color:var(--navy);line-height:1;margin:2px 0 6px}
+.col{background:var(--sky);border-radius:26px;padding:28px 30px}
+.col h2{font-size:34px;font-weight:800;color:var(--navy);margin-bottom:4px}
+.col .st{font-size:20px;color:var(--ink3);font-weight:700;margin-bottom:16px}
+.col ul{list-style:none;display:grid;gap:14px}
+.col li{font-size:22px;line-height:1.32;color:var(--ink);padding-left:30px;position:relative}
+.col li::before{content:"";position:absolute;left:0;top:12px;width:14px;height:14px;border-radius:50%;background:var(--blue)}
+.row{display:flex;gap:44px;justify-content:center;align-items:flex-start}
 .nav{position:fixed;right:24px;bottom:24px;display:flex;gap:8px;z-index:50}
 .nav button{background:var(--navy);color:#fff;border:0;border-radius:12px;padding:12px 16px;font:700 15px Inter;cursor:pointer}
-</style>
-</head>
-<body>
-<div id="deck">
-<section class="slide" id="s1">
-  <div class="kicker">Longevity Life Academy · Board update · 6 October 2026 · 1 / 4</div>
-  <h1>What was done, August – September 2026</h1>
-  <div style="display:grid;grid-template-columns:900px 1fr;gap:56px;margin-top:40px;flex:1">
-    <ul class="big">
-      <li data-n="1"><b>Lead gen at full pace:</b> 1,026 leads at $23 since 1 Sep.</li>
-      <li data-n="2"><b>Blueprint e-commerce launched, then stalled:</b> 3 sales on $15,508. Funnel now being rebuilt.</li>
-      <li data-n="3"><b>Lead gen moved to maintenance:</b> new videos, ≈ $330/day until sales conversion is fixed.</li>
-      <li data-n="4"><b>Julie's Masterclass launched 27 Sep:</b> new site, checkout, 45 e-mails, group posts (9 M), 66 ads in 6 test sets.</li>
-    </ul>
-    <div>
-      <div class="lab">Julie's full film · 2:19</div>
-      <div class="sq" style="aspect-ratio:16/9"><video src="https://gitteromri-ux.github.io/lla-masterclass-assets/video/julie-masterclass-film-full-1080p.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div>
-      <div class="lab" style="margin-top:26px">E-commerce and lead-gen ads that ran until September</div>
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px">
-        <div><div class="sq" style="aspect-ratio:1"><img src="https://gitteromri-ux.github.io/lla-meta-ig-ad-sizes/ads/LLA_JULIE_1x1_1080x1080.png" alt=""></div><div class="cap">Blueprint · Julie</div></div>
-        <div><div class="sq" style="aspect-ratio:1"><img src="https://gitteromri-ux.github.io/lla-meta-ig-ad-sizes/ads/LLA_COURTNEY_1x1_1080x1080.png" alt=""></div><div class="cap">Blueprint · Courtney</div></div>
-        <div><div class="sq" style="aspect-ratio:1"><img src="assets/blueprint-julie-ad6-static.jpg" alt=""></div><div class="cap">Blueprint · Ad#6</div></div>
-        <div><div class="sq" style="aspect-ratio:1"><img src="assets/lead-courtney-ad7-static.jpg" alt=""></div><div class="cap">Lead gen · Ad#7</div></div>
-        <div><div class="sq" style="aspect-ratio:1"><img src="assets/lead-courtney-ad3-static.jpg" alt=""></div><div class="cap">Lead gen · Ad#3</div></div>
-      </div>
-    </div>
-  </div>
-  <div class="foot"><span>Source: Meta Marketing API · 1 Sep – 6 Oct 2026</span><span>Longevity Life Academy · eTeacher Group</span></div>
-</section>
-
-<section class="slide" id="s2">
-  <div class="kicker">Board update · 6 October 2026 · 2 / 4</div>
-  <h1>The plan forward: <b>three efforts</b>, one budget</h1>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px">
-    <div class="kpi n"><div class="l">Masterclass sales since 27 Sep</div><div class="v">16</div><div class="s">24 checkouts opened</div></div>
-    <div class="kpi g"><div class="l">Cost per sale today</div><div class="v">$244</div><div class="s">$889 Sat → $649 Mon → $244 Tue</div></div>
-    <div class="kpi"><div class="l">Spent of $40,813</div><div class="v">$9,334</div><div class="s">$31,479 left · nothing added</div></div>
-    <div class="kpi"><div class="l">Forecast sign-ups</div><div class="v">125 · 225</div><div class="s">by 27 Oct · by 14 Nov</div></div>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:24px;flex:1">
-    <div class="col"><h2>1 · Lead generation</h2><div class="num">$334 / day · maintenance</div>
-      <ul><li>Keep the two sets at $17 – 28 per lead</li><li>Cut cart-recovery to $73 / $33 a day</li><li>Measure lead → ticket conversion by 20 Oct</li></ul></div>
-    <div class="col"><h2>2 · E-commerce reshuffle</h2><div class="num">$103 / day → relaunch</div>
-      <ul><li>Hold: 0 sales on $2,718 since 28 Sep</li><li>New ads, real urgency, pricing promo</li><li>Relaunch with masterclass learnings: UGC + Reels</li></ul></div>
-    <div class="col" style="background:var(--greenbg)"><h2>3 · Julie's Masterclass</h2><div class="num">$1,200 → $850 → $700 / day</div>
-      <ul><li>Focus sets 03 / 04 (10 of 16 sales); 06 paused</li><li>3 – 4 new UGC by Thu, Reels versions by Sat</li><li>Cost per sale $244 → $160 → $110</li><li>Gates: 8 Oct · 13 Oct · 20 Oct</li></ul></div>
-  </div>
-  <div class="foot"><span><b>Budget rule:</b> both dates (27 Oct, 14 Nov) inside the original $40,813. No additional budget.</span><span>Forecast = model; actuals = Meta-attributed</span></div>
-</section>
-
-<section class="slide" id="s3">
-  <div class="kicker">Board update · 6 October 2026 · 3 / 4 · Masterclass materials I</div>
-  <h1>Website, Julie's adapted film, <b>banners + Reels</b></h1>
-  <div style="display:grid;grid-template-columns:760px 1fr;gap:48px;margin-top:24px;flex:1">
-    <div>
-      <div class="lab">longevitylifeacademy.com/julie-masterclass · 60 s walkthrough</div>
-      <div class="laptop"><div class="bezel"><div class="screen" style="aspect-ratio:16/9"><video src="https://d2ol7oe51mr4n9.cloudfront.net/user_3B2TkzjFQaqg6v69LxXPlh5VT9f/8b140e20-1d59-4eb0-b380-acb92fe09d8b.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div></div><div class="base"></div></div>
-      <div class="lab" style="margin-top:20px">Julie's film re-cut for the offer · 2:19 + 75 / 60 / 45 s in 4 ratios</div>
-      <div class="sq" style="aspect-ratio:16/9;width:420px"><video src="https://gitteromri-ux.github.io/lla-masterclass-assets/video/julie-masterclass-film-full-1080p-masterclass-edit.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div>
-    </div>
-    <div>
-      <div class="lab">Four banners · 1:1 · 4:5 · 9:16</div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
-        <div><div class="sq" style="aspect-ratio:1"><img src="https://gitteromri-ux.github.io/lla-marketing-dashboard/julie-banners/img/card-gold-1080x1080.jpg" alt=""></div><div class="cap"><span class="tag sold">3 sales</span></div></div>
-        <div><div class="sq" style="aspect-ratio:1"><img src="https://gitteromri-ux.github.io/lla-marketing-dashboard/julie-banners/img/card-blue-1080x1080.jpg" alt=""></div><div class="cap"><span class="tag live">live</span></div></div>
-        <div><div class="sq" style="aspect-ratio:1"><img src="https://gitteromri-ux.github.io/lla-marketing-dashboard/julie-banners/img/zoom-gold-1080x1080.jpg" alt=""></div><div class="cap"><span class="tag sold">1 sale</span></div></div>
-        <div><div class="sq" style="aspect-ratio:1"><img src="https://gitteromri-ux.github.io/lla-marketing-dashboard/julie-banners/img/zoom-blue-1080x1080.jpg" alt=""></div><div class="cap"><span class="tag res">reserve</span></div></div>
-      </div>
-      <div class="lab" style="margin-top:22px">Reels + music · 9:16</div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;justify-items:center">
-        <div><div class="phone" style="width:230px;height:460px"><div class="notch"></div><div class="scr"><video src="https://gitteromri-ux.github.io/lla-marketing-dashboard/julie-banners/video/card-gold-reels.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div></div><div class="cap"><span class="tag sold">2 sales</span></div></div>
-        <div><div class="phone" style="width:230px;height:460px"><div class="notch"></div><div class="scr"><video src="https://gitteromri-ux.github.io/lla-marketing-dashboard/julie-banners/video/card-blue-reels.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div></div><div class="cap"><span class="tag live">live</span></div></div>
-        <div><div class="phone" style="width:230px;height:460px"><div class="notch"></div><div class="scr"><video src="https://gitteromri-ux.github.io/lla-marketing-dashboard/julie-banners/video/zoom-blue-reels.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div></div><div class="cap"><span class="tag res">reserve</span></div></div>
-      </div>
-    </div>
-  </div>
-  <div class="foot"><span><b>Offer:</b> $49 · VIP $79 · Zoom · Tue 27 Oct 7 pm ET or Sat 14 Nov 1 pm ET</span><span>Tags = Meta-attributed sales 28 Sep – 6 Oct</span></div>
-</section>
-
-<section class="slide" id="s4">
-  <div class="kicker">Board update · 6 October 2026 · 4 / 4 · Masterclass materials II</div>
-  <h1>Eight presenter videos — the format that sells at <b>$115 – 312</b></h1>
-  <div style="display:grid;grid-template-columns:repeat(8,1fr);gap:14px;margin-top:30px;justify-items:center;flex:1;align-content:start">
-    <div><div class="phone" style="width:205px;height:420px"><div class="notch"></div><div class="scr"><video src="https://d2ol7oe51mr4n9.cloudfront.net/user_3B2TkzjFQaqg6v69LxXPlh5VT9f/1dd19ae4-5a35-4d50-846c-bb70dfd67988.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div></div><div class="cap">Five habits<small><span class="tag sold">4 sales</span></small></div></div>
-    <div><div class="phone" style="width:205px;height:420px"><div class="notch"></div><div class="scr"><video src="https://d2ol7oe51mr4n9.cloudfront.net/user_3B2TkzjFQaqg6v69LxXPlh5VT9f/47970f8f-cdff-43e8-97db-ef5ddfccd1cd.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div></div><div class="cap">Deadlier than smoking<small><span class="tag sold">3 sales</span></small></div></div>
-    <div><div class="phone" style="width:205px;height:420px"><div class="notch"></div><div class="scr"><video src="https://d2ol7oe51mr4n9.cloudfront.net/user_3B2TkzjFQaqg6v69LxXPlh5VT9f/80ae63fd-ec5b-4274-94df-b53dce0bea9b.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div></div><div class="cap">DNA 3 years younger<small><span class="tag off">paused</span></small></div></div>
-    <div><div class="phone" style="width:205px;height:420px"><div class="notch"></div><div class="scr"><video src="https://d2ol7oe51mr4n9.cloudfront.net/user_3B2TkzjFQaqg6v69LxXPlh5VT9f/07f31b55-9581-406d-acd2-3ad4c4a9b26b.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div></div><div class="cap">33 years apart<small><span class="tag off">paused</span></small></div></div>
-    <div><div class="phone" style="width:205px;height:420px"><div class="notch"></div><div class="scr"><video src="https://d2ol7oe51mr4n9.cloudfront.net/user_3B2TkzjFQaqg6v69LxXPlh5VT9f/2b39fdef-5cc6-4a1f-a9b3-19e5ecea7ec3.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div></div><div class="cap">33 years apart<small><span class="tag res">reserve</span></small></div></div>
-    <div><div class="phone" style="width:205px;height:420px"><div class="notch"></div><div class="scr"><video src="https://d2ol7oe51mr4n9.cloudfront.net/user_3B2TkzjFQaqg6v69LxXPlh5VT9f/ec5d8851-b78f-4c95-bd60-a252ea59bd41.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div></div><div class="cap">DNA 3 years younger<small><span class="tag res">reserve</span></small></div></div>
-    <div><div class="phone" style="width:205px;height:420px"><div class="notch"></div><div class="scr"><video src="https://d2ol7oe51mr4n9.cloudfront.net/user_3B2TkzjFQaqg6v69LxXPlh5VT9f/8377076f-9510-4dbc-a233-1adf417a72c6.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div></div><div class="cap">Five habits<small><span class="tag res">reserve</span></small></div></div>
-    <div><div class="phone" style="width:205px;height:420px"><div class="notch"></div><div class="scr"><video src="https://d2ol7oe51mr4n9.cloudfront.net/user_3B2TkzjFQaqg6v69LxXPlh5VT9f/94b93368-1c42-4344-b64e-39726bdf5c0c.mp4" muted loop playsinline preload="auto"></video><button class="snd">Sound</button></div></div><div class="cap">Deadlier than smoking<small><span class="tag res">reserve</span></small></div></div>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:10px">
-    <div class="kpi g"><div class="l">UGC in set 04</div><div class="v">6 of 16 sales</div><div class="s">$232 per sale on $1,392</div></div>
-    <div class="kpi"><div class="l">Next</div><div class="v">3 – 4 new</div><div class="s">UGC variants live Thu 9 Oct</div></div>
-    <div class="kpi n"><div class="l">All assets</div><div class="s" style="margin-top:6px;font-size:20px">gitteromri-ux.github.io/lla-marketing-dashboard/julie-banners/slides/slides.html</div></div>
-  </div>
-  <div class="foot"><span>Website · checkout · 45 e-mails · 66 ads · 8 UGC · 4 banners × 3 ratios · 3 Reels · Julie's film in 13 cuts · organic kit</span><span>Tags = Meta-attributed sales 28 Sep – 6 Oct</span></div>
-</section>
-</div>
-<div class="nav"><button onclick="go(-1)">◀ Prev</button><button onclick="go(1)">Next ▶</button><button onclick="document.querySelectorAll('video').forEach(v=>v.muted=true)">Mute all</button></div>
+</style></head>
+<body><div id="deck"><section class="slide" id="s1"><div class="kicker">Longevity Life Academy · Board update · 6 October 2026 · 1 / 6</div><h1>What we did · August – September 2026</h1><div style="display:grid;grid-template-columns:1180px 1fr;gap:56px;margin-top:40px;flex:1"><ul class="big"><li data-n="1"><b>Lead generation.</b> Ran Julie and Courtney video and static ad sets on Meta for the longevity course: 1,026 qualified leads since 1 September at $23 per lead, delivered to the sales team daily.</li><li data-n="2"><b>Blueprint e-commerce.</b> Launched the self-service course checkout and achieved the first 3 online sales. The signal was not yet strong enough to scale, so the funnel is being rebuilt: new ads, adapted pricing, sharper urgency.</li><li data-n="3"><b>Lead generation re-tuned.</b> New videos uploaded and daily volume reduced on purpose, so paid spend waits for the sales-conversion fix instead of running ahead of it.</li><li data-n="4"><b>Julie's Masterclass, built bottom-up, launched 27 September.</b> A low-ticket, high-prestige live event ($49 / $79 VIP, 27 Oct and 14 Nov) that builds a buying community to upsell into the full course: new website, three-step checkout, 45 e-mails, posts in the largest longevity groups (≈ 9 M followers), 66 ads in six test ad sets.</li></ul><div class="sq" style="height:760px;aspect-ratio:9/16;border-radius:28px;justify-self:end"><img src="img/julie_couch_a_web.jpg" alt="" style="object-position:62% 50%"></div></div><div class="foot"><span>Longevity Life Academy · eTeacher Group · Board update 6 October 2026</span><span>Sources: Meta Marketing API 1 Sep – 6 Oct 2026 · asset libraries on GitHub Pages</span></div></section><section class="slide" id="s2"><div class="kicker">Longevity Life Academy · Board update · 6 October 2026 · 2 / 6</div><h1>What we are going to do · three efforts, one budget</h1><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:26px"><div class="kpi n"><div class="l">Masterclass sales since 27 Sep</div><div class="v">16</div><div class="s">24 checkouts opened · Meta-attributed</div></div><div class="kpi g"><div class="l">Cost per sale</div><div class="v">$244</div><div class="s">today · from $889 Sat and $649 Mon</div></div><div class="kpi "><div class="l">Masterclass budget used</div><div class="v">23%</div><div class="s">$9,334 of the $40,813 envelope · nothing added</div></div><div class="kpi "><div class="l">Forecast paid sign-ups</div><div class="v">125 · 225</div><div class="s">by 27 Oct · by 14 Nov, inside the envelope</div></div></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px;flex:1"><div class="col"><h2>1 · Lead generation</h2><div class="st">Steady, efficient, ready to scale</div><ul><li>Keep the two ad sets delivering at $17 – 28 per lead; new Julie and Courtney videos already live.</li><li>Lower daily volume until lead → sale conversion is measured on the first 500 contacts (by 20 Oct).</li><li>Connect CRM outcomes to Meta after 26 Oct so Meta optimises for leads that buy.</li><li>Scale back up only on proven conversion, not on lead cost alone.</li></ul></div><div class="col"><h2>2 · Blueprint e-commerce</h2><div class="st">Rebuild, then relaunch on better signals</div><ul><li>First 3 online sales proved the checkout works; the offer did not yet give a reason to buy now.</li><li>Reshuffle the funnel: adapted pricing, a dated promotion and a clear deadline on the offer page.</li><li>New ads in the formats that sell for the masterclass: presenter videos and Reels with sound.</li><li>De-scale to a holding budget today; relaunch when the first signals improve.</li></ul></div><div class="col" style=background:var(--greenbg)><h2>3 · Julie's Masterclass</h2><div class="st">Scale what sells, improving every day</div><ul><li>Concentrate budget on the two ad sets with 10 of 16 sales; pause what has not opened a checkout.</li><li>3 – 4 new presenter videos by Thu 9 Oct, Reels versions by Sat; 9 of 16 sales came from Reels.</li><li>Spend $1,200/day → $850 (13 Oct) → $700 (28 Oct) while cost per sale moves $244 → $160 → $110.</li><li>Checkpoints 8 Oct · 13 Oct · 20 Oct; both dates inside the original $40,813, no additional budget.</li></ul></div></div><div class="foot"><span>Longevity Life Academy · eTeacher Group · Board update 6 October 2026</span><span>Sources: Meta Marketing API 1 Sep – 6 Oct 2026 · asset libraries on GitHub Pages</span></div></section><section class="slide" id="s3"><div class="kicker">Longevity Life Academy · Board update · 6 October 2026 · 3 / 6</div><h1>Round 1 · the films and the ads that ran until September</h1><div class="row" style="margin-top:30px"><div style="width:830px"><div class="sq" style="aspect-ratio:16/9"><video src="video/julie-film-full.mp4" poster="video/julie-film-full.jpg" muted loop playsinline preload="metadata"></video><button class="snd">Sound</button></div><div class=cap>Julie Gibson Clark · full film · 2:19</div></div><div style="width:830px"><div class="sq" style="aspect-ratio:16/9"><video src="video/courtney-full.mp4" poster="video/courtney-full.jpg" muted loop playsinline preload="metadata"></video><button class="snd">Sound</button></div><div class=cap>Courtney · full film</div></div></div><div class="row" style="margin-top:30px;gap:30px"><div><div class="sq" style="height:250px;aspect-ratio:1"><img src="img/LLA_JULIE_1x1_1080x1080.jpg" alt=""></div><div class="cap">Blueprint · Julie</div></div><div><div class="sq" style="height:250px;aspect-ratio:1"><img src="img/LLA_COURTNEY_1x1_1080x1080.jpg" alt=""></div><div class="cap">Blueprint · Courtney</div></div><div><div class="sq" style="height:250px;aspect-ratio:1"><img src="img/blueprint-julie-ad6-static.jpg" alt=""></div><div class="cap">Blueprint · Ad#6</div></div><div><div class="sq" style="height:250px;aspect-ratio:1"><img src="img/lead-courtney-ad3-static.jpg" alt=""></div><div class="cap">Lead gen · Ad#3</div></div><div><div class="sq" style="height:250px;aspect-ratio:1200/628"><img src="img/lead-courtney-ad7-static.jpg" alt=""></div><div class="cap">Lead gen · Ad#7</div></div></div><div class="foot"><span>Longevity Life Academy · eTeacher Group · Board update 6 October 2026</span><span>Sources: Meta Marketing API 1 Sep – 6 Oct 2026 · asset libraries on GitHub Pages</span></div></section><section class="slide" id="s4"><div class="kicker">Longevity Life Academy · Board update · 6 October 2026 · 4 / 6</div><h1>Masterclass · the website and Julie's adapted film</h1><div class="sub">longevitylifeacademy.com/julie-masterclass · 60 s walkthrough: hero → dates → VIP seat → payment</div><div class="row" style="margin-top:30px"><div class="laptop" style="width:1080px"><div class="bezel"><div class="screen"><video src="video/website-walkthrough.mp4" poster="video/website-walkthrough.jpg" muted loop playsinline preload="metadata"></video><button class="snd">Sound</button></div></div><div class="base"></div></div><div style="width:620px"><div class="sq" style="aspect-ratio:16/9"><video src="video/julie-film-masterclass-edit.mp4" poster="video/julie-film-masterclass-edit.jpg" muted loop playsinline preload="metadata"></video><button class="snd">Sound</button></div><div class=cap>Masterclass edit · 2:19 · also cut to 75 / 60 / 45 s in 4 ratios</div></div></div><div class="foot"><span>Longevity Life Academy · eTeacher Group · Board update 6 October 2026</span><span>Sources: Meta Marketing API 1 Sep – 6 Oct 2026 · asset libraries on GitHub Pages</span></div></section><section class="slide" id="s5"><div class="kicker">Longevity Life Academy · Board update · 6 October 2026 · 5 / 6</div><h1>Masterclass · the banner family</h1><div class="sub">Four designs in every Meta size, plus 9:16 Reels with music · tags = Meta-attributed sales 28 Sep – 6 Oct</div><div class="row" style="margin-top:30px"><div><div class="sq" style="height:400px;aspect-ratio:1"><img src="img/card-gold-1080x1080.jpg" alt=""></div><div class="cap">card-gold <span class="tag sold">3 sales</span></div></div><div><div class="sq" style="height:400px;aspect-ratio:1"><img src="img/card-blue-1080x1080.jpg" alt=""></div><div class="cap">card-blue <span class="tag live">live</span></div></div><div><div class="sq" style="height:400px;aspect-ratio:1"><img src="img/zoom-gold-1080x1080.jpg" alt=""></div><div class="cap">zoom-gold <span class="tag sold">1 sale</span></div></div><div><div class="sq" style="height:400px;aspect-ratio:1"><img src="img/zoom-blue-1080x1080.jpg" alt=""></div><div class="cap">zoom-blue <span class="tag res">reserve</span></div></div></div><div class="row" style="margin-top:30px;gap:30px"><div><div class="sq" style="height:270px;aspect-ratio:9/16"><img src="img/card-gold-1080x1920.jpg" alt=""></div></div><div><div class="sq" style="height:270px;aspect-ratio:9/16"><img src="img/card-blue-1080x1920.jpg" alt=""></div></div><div><div class="sq" style="height:270px;aspect-ratio:9/16"><img src="img/zoom-gold-1080x1920.jpg" alt=""></div></div><div><div class="sq" style="height:270px;aspect-ratio:9/16"><img src="img/zoom-blue-1080x1920.jpg" alt=""></div></div></div><div class="foot"><span>Longevity Life Academy · eTeacher Group · Board update 6 October 2026</span><span>Sources: Meta Marketing API 1 Sep – 6 Oct 2026 · asset libraries on GitHub Pages</span></div></section><section class="slide" id="s6"><div class="kicker">Longevity Life Academy · Board update · 6 October 2026 · 6 / 6</div><h1>Masterclass · presenter videos, the format that sells at $115 – 312</h1><div class="sub">Four of eight AI-presenter ads · tags = Meta-attributed sales 28 Sep – 6 Oct</div><div class="row" style="margin-top:30px"><div><div class="phone" style="width:370px;height:740px"><div class="notch"></div><div class="scr"><video src="video/ugc-w-five-habits.mp4" poster="video/ugc-w-five-habits.jpg" muted loop playsinline preload="metadata"></video><button class="snd">Sound</button></div></div><div class="cap">Five habits <span class="tag sold">Ad#17 · 4 sales</span></div></div><div><div class="phone" style="width:370px;height:740px"><div class="notch"></div><div class="scr"><video src="video/ugc-m-deadlier.mp4" poster="video/ugc-m-deadlier.jpg" muted loop playsinline preload="metadata"></video><button class="snd">Sound</button></div></div><div class="cap">Deadlier than smoking <span class="tag sold">Ad#18 · 3 sales</span></div></div><div><div class="phone" style="width:370px;height:740px"><div class="notch"></div><div class="scr"><video src="video/ugc-w-dna.mp4" poster="video/ugc-w-dna.jpg" muted loop playsinline preload="metadata"></video><button class="snd">Sound</button></div></div><div class="cap">DNA 3 years younger <span class="tag off">Ad#16 · paused</span></div></div><div><div class="phone" style="width:370px;height:740px"><div class="notch"></div><div class="scr"><video src="video/ugc-m-33years.mp4" poster="video/ugc-m-33years.jpg" muted loop playsinline preload="metadata"></video><button class="snd">Sound</button></div></div><div class="cap">33 years apart <span class="tag off">Ad#15 · paused</span></div></div></div><div class="foot"><span>Longevity Life Academy · eTeacher Group · Board update 6 October 2026</span><span>Sources: Meta Marketing API 1 Sep – 6 Oct 2026 · asset libraries on GitHub Pages</span></div></section></div>
+<div class="nav"><a href="LLA_Board_Deck_2026-10-06.pptx" style="background:#1f6fb2;color:#fff;text-decoration:none;border-radius:12px;padding:12px 16px;font:700 15px Inter">Download PowerPoint</a><button onclick="go(-1)">◀ Prev</button><button onclick="go(1)">Next ▶</button><button onclick="document.querySelectorAll('video').forEach(v=>v.muted=true)">Mute all</button></div>
 <script>
 function fit(){const w=Math.min(window.innerWidth-16,1920);const s=w/1920;document.querySelectorAll('.slide').forEach(el=>{el.style.transform='scale('+s+')';el.style.transformOrigin='top left';el.style.marginBottom=(28*s-1080*(1-s))+'px';});document.getElementById('deck').style.width=w+'px';}
 window.addEventListener('resize',fit);fit();
-let cur=0;const slides=[...document.querySelectorAll('.slide')];
+let cur=0;const slides=[...document.querySelectorAll('.slide')];const only=new URLSearchParams(location.search).get('only');if(only){slides.forEach(s=>{if(s.id!==only)s.style.display='none'});}
 function go(d){cur=Math.max(0,Math.min(slides.length-1,cur+d));slides[cur].scrollIntoView({behavior:'smooth',block:'start'});}
 document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='PageDown')go(1);if(e.key==='ArrowLeft'||e.key==='PageUp')go(-1);});
-// play only videos on the visible slide so every one of them actually runs
-const io=new IntersectionObserver(es=>es.forEach(e=>{e.target.querySelectorAll('video').forEach(v=>{if(e.isIntersecting){v.play().catch(()=>{});}else{v.pause();}});}),{threshold:.3});
+const io=new IntersectionObserver(es=>es.forEach(e=>{e.target.querySelectorAll('video').forEach(v=>{if(e.isIntersecting){if(v.preload!=='auto'){v.preload='auto';v.load();}v.play().catch(()=>{});}else{v.pause();}});}),{threshold:.25});
 slides.forEach(s=>io.observe(s));
 document.addEventListener('click',e=>{const b=e.target.closest('.snd');if(!b)return;const v=b.parentElement.querySelector('video');const on=v.muted;document.querySelectorAll('video').forEach(x=>{x.muted=true});document.querySelectorAll('.snd').forEach(x=>x.textContent='Sound');if(on){v.muted=false;v.currentTime=0;v.play().catch(()=>{});b.textContent='Mute';}});
-</script>
-</body>
-</html>
+</script></body></html>
