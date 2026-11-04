@@ -9,7 +9,7 @@
 --teal:#3FD8C2;--blue:#5B9BFF;--violet:#9D8CFF;--pink:#E08BE6;--serif:'Playfair Display',Georgia,serif;--sans:'Inter',Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;background:#01060F;overflow:hidden;color:#fff;font-family:var(--sans)}
-#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center}
+body{position:fixed;inset:0;margin:0}#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
 .slide{position:absolute;inset:0;overflow:hidden;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility 0s .7s;background:linear-gradient(165deg,#030d1a 0%,#001233 50%,#001a3d 100%)}
 .slide.on{opacity:1;visibility:visible;transition:opacity .7s ease}
 .glow{position:absolute;border-radius:50%;pointer-events:none}
@@ -287,7 +287,7 @@ function act(i){S.forEach((s,j)=>{const on=j===i;s.classList.toggle('on',on);s.q
 function go(d){cur=Math.max(0,Math.min(S.length-1,cur+d));act(cur)}
 addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();go(1)}if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();go(-1)}});
 document.addEventListener('click',e=>{if(e.target.closest('button'))return;if(e.clientX>innerWidth*0.6)go(1);else if(e.clientX<innerWidth*0.15)go(-1)});
-function fit(){const s=Math.min(innerWidth/1920,innerHeight/1080);$('stage').style.transform=`translate(-50%,-50%) scale(${s})`}addEventListener('resize',fit);fit();
+function fit(){const W=document.documentElement.clientWidth,H=document.documentElement.clientHeight,s=Math.min(W/1920,H/1080);$('stage').style.transform=`translate(${(W-1920*s)/2}px,${(H-1080*s)/2}px) scale(${s})`}addEventListener('resize',fit);fit();
 setInterval(()=>{document.querySelectorAll('.slide.on .hk').forEach(c=>{const v=c.parentNode.querySelector('video');c.classList.toggle('min',v.currentTime>3.5)})},200);
 cur=Math.max(0,Math.min(S.length-1,(parseInt(location.hash.slice(1))||1)-1));act(cur);
 </script></body></html>
