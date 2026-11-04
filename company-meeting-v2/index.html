@@ -21,16 +21,16 @@ body{position:fixed;inset:0;margin:0}#stage{position:absolute;left:0;top:0;width
 .kick b{color:var(--cy);font-weight:500}
 h2{position:absolute;left:92px;top:104px;font:400 96px/1.04 var(--serif);letter-spacing:-1.5px;color:#fff;text-shadow:0 0 48px rgba(125,229,255,.28);white-space:nowrap}
 h2 em{font-style:italic;color:var(--sky)}
-.lede{position:absolute;left:96px;top:226px;font:italic 400 34px/1.3 var(--serif);color:var(--ink)}
+.lede{position:absolute;left:96px;top:222px;font:italic 400 38px/1.3 var(--serif);color:var(--ink)}
 .logo{position:absolute;right:84px;top:52px;width:228px;opacity:.95}
-.big h2{top:84px;font-size:58px;letter-spacing:-.8px}.big .kick{top:44px}
+.big h2{top:80px;font-size:66px;letter-spacing:-.8px}.big .kick{top:44px}
 .pg .dots{margin-left:14px;letter-spacing:4px;color:var(--cy)}
 .ev .bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05) brightness(.8)}
 .ev .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,13,26,.92) 0%,rgba(3,13,26,.55) 45%,rgba(3,13,26,.25) 70%,rgba(3,13,26,.75) 100%),linear-gradient(0deg,rgba(3,13,26,.95) 0%,rgba(3,13,26,0) 40%)}
 .live{position:absolute;left:96px;top:118px;display:flex;align-items:center;gap:12px;padding:10px 20px;border-radius:12px;background:#E5334B;font:700 26px var(--sans);letter-spacing:4px;color:#fff;box-shadow:0 0 40px rgba(229,51,75,.6)}
 .live span{width:14px;height:14px;border-radius:50%;background:#fff;animation:blink 1.2s infinite}@keyframes blink{50%{opacity:.2}}
 .evh{position:absolute;left:96px;top:210px}.evh .num{color:#F6DC8C;text-shadow:0 0 80px rgba(246,220,140,.45)}
-.evt{font:400 64px/1.08 var(--serif);color:#fff;margin-top:10px}.evt em{color:#9CC8FF}.evs{font:300 26px var(--sans);color:#C8D3E3;margin-top:18px}
+.evt{font:400 64px/1.08 var(--serif);color:#fff;margin-top:10px}.evt em{color:#9CC8FF}.evs{font:400 30px var(--sans);color:#C8D3E3;margin-top:18px}
 .wall{position:absolute;right:96px;top:200px;width:700px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
 .wall i{aspect-ratio:16/10;border-radius:12px;box-shadow:0 0 0 1px rgba(125,229,255,.25) inset;backdrop-filter:blur(6px);animation:pulse 3s ease-in-out infinite}
 @keyframes pulse{50%{box-shadow:0 0 0 2px rgba(125,229,255,.7) inset,0 0 24px rgba(125,229,255,.35)}}
@@ -47,7 +47,8 @@ h2 em{font-style:italic;color:var(--sky)}
 .card .n{font:500 24px/1 var(--sans);letter-spacing:4px;color:var(--c)}
 .card .t{font:400 46px/1.08 var(--serif);color:#fff;margin-top:14px}
 .card .m{position:relative;height:200px;margin:2px -8px 22px;border-radius:16px;overflow:hidden;background:#0b1422;box-shadow:0 0 0 1px rgba(255,255,255,.12)}.card .m video,.card .m img{width:100%;height:100%;object-fit:cover;object-position:top}
-.card .s{font:italic 400 25px/1.3 var(--serif);color:var(--ink);margin-top:12px}
+.card.ov .m{height:536px;margin:0 0 12px;border-radius:18px}.card.ov .n{margin-left:10px}.card.ov .n{display:inline-block;font-size:20px;margin-right:12px}.card.ov{white-space:nowrap}.card.ov .t{display:block;font-size:40px;line-height:1;margin:4px 0 0 8px;white-space:nowrap}.card.ov:before{left:22px;right:22px;top:18px;height:7px}
+.card .s{font:italic 400 28px/1.3 var(--serif);color:var(--ink);margin-top:12px}
 .c-teal{--c:#7FF0DD;--bar:linear-gradient(90deg,#3FD8C2,#7DE5FF);background:linear-gradient(180deg,rgba(63,216,194,.26),rgba(20,60,80,.30))}
 .c-blue{--c:#8FBFFF;--bar:linear-gradient(90deg,#4C8DFF,#9CC8FF);background:linear-gradient(180deg,rgba(76,141,255,.28),rgba(20,40,90,.30))}
 .c-violet{--c:#C4B6FF;--bar:linear-gradient(90deg,#8B7CFF,#C4B6FF);background:linear-gradient(180deg,rgba(139,124,255,.28),rgba(40,30,90,.30))}
@@ -63,7 +64,7 @@ h2 em{font-style:italic;color:var(--sky)}
 .lap .scr:after{content:"";position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.07),rgba(255,255,255,0) 38%);pointer-events:none}
 .lap .base{position:relative;height:18px;margin:0 -5.5%;border-radius:2px 2px 20px 20px;background:linear-gradient(180deg,#d9dee6 0%,#aab3c0 55%,#7d8796 100%);box-shadow:0 18px 30px rgba(0,0,0,.45)}
 .lap .base:before{content:"";position:absolute;left:50%;top:0;width:16%;height:7px;margin-left:-8%;border-radius:0 0 10px 10px;background:linear-gradient(#9aa4b2,#c3cad4)}
-.chip{position:absolute;left:16px;top:16px;z-index:3;padding:10px 16px 10px 14px;border-radius:14px;background:rgba(3,13,26,.86);box-shadow:0 0 0 1px rgba(125,229,255,.35) inset,0 10px 30px rgba(0,0,0,.4);font:400 24px/1 var(--serif);color:#fff;display:flex;gap:10px;align-items:center}.chip i{font:500 15px var(--sans);letter-spacing:3px;color:var(--cy);font-style:normal}
+.chip{position:absolute;left:16px;top:16px;z-index:3;padding:10px 16px 10px 14px;border-radius:14px;background:rgba(3,13,26,.86);box-shadow:0 0 0 1px rgba(125,229,255,.35) inset,0 10px 30px rgba(0,0,0,.4);font:400 30px/1 var(--serif);color:#fff;display:flex;gap:10px;align-items:center}.chip i{font:500 15px var(--sans);letter-spacing:3px;color:var(--cy);font-style:normal}
 .lab{position:absolute;left:0;right:0;font:400 22px/1.3 var(--sans);color:var(--mute);text-align:center;margin-top:22px}
 .lab b{display:block;font:400 32px/1.15 var(--serif);color:#fff;margin-bottom:4px}
 .ph{position:absolute;border-radius:46px;padding:10px;background:linear-gradient(160deg,#2a313c,#0a0d13 40%);box-shadow:0 0 0 1.5px rgba(255,255,255,.12) inset,0 40px 80px rgba(0,0,0,.6),0 0 90px rgba(125,229,255,.12)}
@@ -91,7 +92,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;background:#0b1422}
 .step:before{content:"";position:absolute;left:24px;top:22px;bottom:22px;width:8px;border-radius:8px;background:var(--bar)}
 .step .k{position:absolute;left:46px;top:30px;font:500 24px var(--sans);letter-spacing:3px;color:var(--c)}
 .step .t{font:400 36px/1.05 var(--serif);color:#fff}
-.step .s{font:italic 400 22px var(--serif);color:var(--ink);margin-top:6px}
+.step .s{font:italic 400 26px var(--serif);color:var(--ink);margin-top:6px}
 .step .c{position:absolute;right:26px;top:24px;font:italic 400 60px/1 var(--serif);color:var(--c)}
 .step:not(:last-child):after{content:"";position:absolute;left:52px;bottom:-20px;width:2px;height:18px;background:rgba(125,229,255,.5)}
 .tl{position:absolute;left:96px;top:520px;width:1728px;height:3px;background:linear-gradient(90deg,#3FD8C2,#5B9BFF,#9D8CFF,#E08BE6)}
@@ -109,11 +110,11 @@ body:hover .nav{opacity:.85}
 <h2>What we built <em>in Longevity.</em></h2>
 <div class="lede">Five pieces that work as one system.</div>
 <img class="logo" src="img/logo-dark.png" alt="Longevity Life Academy by eTeacher Group">
-<div class="card c-teal" style="left:96px;top:340px;width:326px;min-height:560px"><div class="m"><video data-src="v/wine.mp4" poster="v/wine.jpg" muted loop playsinline></video></div><div class="n">01</div><div class="t">The Masterclass</div><div class="s">Julie Gibson Clark, live on Zoom.</div></div>
-<div class="card c-blue" style="left:446px;top:340px;width:326px;min-height:560px"><div class="m"><video data-src="v/bp_pagesdev.mp4" poster="v/bp_pagesdev.jpg" muted loop playsinline></video></div><div class="n">02</div><div class="t">November promo</div><div class="s">A direct-purchase funnel for the Blueprint.</div></div>
-<div class="card c-violet" style="left:796px;top:340px;width:326px;min-height:560px"><div class="m"><video data-src="v/lla_pages.mp4" poster="v/lla_pages.jpg" muted loop playsinline></video></div><div class="n">03</div><div class="t">The sites</div><div class="s">Course, masterclass and offer pages.</div></div>
-<div class="card c-pink" style="left:1146px;top:340px;width:326px;min-height:560px"><div class="m"><img src="em/jm-u1.jpg" alt=""></div><div class="n">04</div><div class="t">The email engine</div><div class="s">An email for every step.</div></div>
-<div class="card c-gold" style="left:1496px;top:340px;width:328px;min-height:560px"><div class="m"><video data-src="r/w46_11.mp4" poster="r/w46_11.jpg" muted loop playsinline></video></div><div class="n">05</div><div class="t">New creative</div><div class="s">Reels and feed video for November.</div></div>
+<div class="card ov c-teal" style="left:96px;top:300px;width:326px;height:640px;padding:34px 12px 14px"><div class="m"><video data-src="v/wine.mp4" poster="v/wine.jpg" muted loop playsinline></video></div><div class="t">212 paid orders</div></div>
+<div class="card ov c-blue" style="left:446px;top:300px;width:326px;height:640px;padding:34px 12px 14px"><div class="m"><video data-src="v/bp_pagesdev.mp4" poster="v/bp_pagesdev.jpg" muted loop playsinline></video></div><div class="t">$79 to start</div></div>
+<div class="card ov c-violet" style="left:796px;top:300px;width:326px;height:640px;padding:34px 12px 14px"><div class="m"><video data-src="v/lla_pages.mp4" poster="v/lla_pages.jpg" muted loop playsinline></video></div><div class="t">5 web pages</div></div>
+<div class="card ov c-pink" style="left:1146px;top:300px;width:326px;height:640px;padding:34px 12px 14px"><div class="m"><img src="em/jm-u1.jpg" alt=""></div><div class="t">37 emails</div></div>
+<div class="card ov c-gold" style="left:1496px;top:300px;width:328px;height:640px;padding:34px 12px 14px"><div class="m"><video data-src="r/w46_11.mp4" poster="r/w46_11.jpg" muted loop playsinline></video></div><div class="t">22 new videos</div></div>
 <div class="pg">01 / 09</div></section>
 
 <!-- 2 MASTERCLASS -->
@@ -121,7 +122,7 @@ body:hover .nav{opacity:.85}
 <div class="kick"><i></i><b>01</b> • The Masterclass · live on Zoom</div>
 <div class="live"><span></span>LIVE</div>
 <img class="logo" src="img/logo-dark.png" alt="">
-<div class="evh"><div class="num" style="font-size:230px;line-height:.9">200</div><div class="evt">people bought a seat<br><em>to learn live with Julie.</em></div><div class="evs">212 paid orders · $49 standard · $79 VIP</div></div>
+<div class="evh"><div class="num" style="font-size:230px;line-height:.9">200</div><div class="evt">people bought a seat<br><em>to learn live with Julie.</em></div><div class="evs">212 paid orders, 16 Sep – 2 Nov · $49 standard · $79 VIP</div></div>
 <div class="wall"><i style="animation-delay:0.00s;background:linear-gradient(0deg,rgba(125,229,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:0.37s;background:linear-gradient(47deg,rgba(91,155,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:0.74s;background:linear-gradient(94deg,rgba(246,220,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.11s;background:linear-gradient(141deg,rgba(180,140,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.48s;background:linear-gradient(188deg,rgba(125,229,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.85s;background:linear-gradient(235deg,rgba(91,155,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:2.22s;background:linear-gradient(282deg,rgba(246,220,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:2.59s;background:linear-gradient(329deg,rgba(180,140,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:2.96s;background:linear-gradient(16deg,rgba(125,229,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:0.33s;background:linear-gradient(63deg,rgba(91,155,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:0.70s;background:linear-gradient(110deg,rgba(246,220,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.07s;background:linear-gradient(157deg,rgba(180,140,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.44s;background:linear-gradient(204deg,rgba(125,229,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.81s;background:linear-gradient(251deg,rgba(91,155,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:2.18s;background:linear-gradient(298deg,rgba(246,220,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:2.55s;background:linear-gradient(345deg,rgba(180,140,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:2.92s;background:linear-gradient(32deg,rgba(125,229,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:0.29s;background:linear-gradient(79deg,rgba(91,155,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:0.66s;background:linear-gradient(126deg,rgba(246,220,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.03s;background:linear-gradient(173deg,rgba(180,140,255,.32),rgba(3,13,26,.9))"></i></div><div class="wallcap">One live class, on Zoom</div>
 <div class="tlx"><div class="seg a"><b>7:00 PM ET</b><span>The Masterclass</span><em>60 min</em></div><div class="seg g"><b>8:00 PM ET</b><span>VIP Q&amp;A</span><em>30 min</em></div></div>
 <div class="src" style="color:#B8C7E0">ActiveCampaign, paid deals for product “Longevity Masterclass”, 16 Sep – 2 Nov 2026 (pulled 4 Nov, 23:15 Israel time) · Courtney Run of Show V3. Tiles are abstract, not attendees.</div>
@@ -139,7 +140,7 @@ body:hover .nav{opacity:.85}
 <!-- 4 NOVEMBER PROMO -->
 <section class="slide"><div class="glow g1"></div><div class="glow g2"></div>
 <div class="kick"><i></i><b>03</b> • November e-commerce promo</div>
-<h2>A new way <em>to buy the Blueprint.</em></h2>
+<h2>$79 starts the Blueprint, <em>online.</em></h2>
 <div class="lede">Pick a plan, pay online, start in November.</div>
 <img class="logo" src="img/logo-dark.png" alt="">
 <div class="lap" style="left:120px;top:318px;width:1060px"><div class="lid"><div class="scr"><video data-src="v/bp_pagesdev.mp4" poster="v/bp_pagesdev.jpg" muted loop playsinline></video><div class="chip"><i>01</i>The Blueprint site · pricing and checkout</div></div></div><div class="base"></div></div>
@@ -188,9 +189,9 @@ body:hover .nav{opacity:.85}
 <div class="pg"></div></section>
 
 <!-- 6 EMAIL ENGINE -->
-<section class="slide"><div class="glow g1"></div><div class="glow g2"></div>
+<section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
 <div class="kick"><i></i><b>05</b> • The email engine</div>
-<h2>An email <em>for every step.</em></h2>
+<h2>37 emails, <em>one for every step.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
 <div class="flow" style="top:270px">
 <div class="step c-teal"><div class="k">01</div><div class="t">Invite</div><div class="s">IIBS, Rosen and LLA lists, by segment</div><div class="c">16</div></div>
@@ -221,7 +222,7 @@ body:hover .nav{opacity:.85}
 <!-- 7 REELS -->
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
 <div class="kick"><i></i><b>06</b> • New creative</div>
-<h2>New Blueprint video, <em>made for November.</em></h2>
+<h2>22 new videos, <em>made for November.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
 <div id="reels"></div>
 <div class="src">22 final video files in lla-blueprint-nov-adjusted final/clips.json. Original music: tap Sound.</div>
