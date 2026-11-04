@@ -1,0 +1,129 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Longevity · Company Meeting</title>
+<style>
+@font-face{font-family:'Playfair';src:url(fonts/PlayfairDisplay-Italic.ttf);font-style:italic}
+@font-face{font-family:'Playfair';src:url(fonts/PlayfairDisplay.ttf);font-style:normal}
+@font-face{font-family:'Inter';src:url(fonts/Inter.ttf);font-weight:100 900}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#02050C;overflow:hidden;font-family:Inter,system-ui,sans-serif;color:#fff}
+#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center}
+.slide{position:absolute;inset:0;overflow:hidden;opacity:0;pointer-events:none;transition:opacity .6s;
+background:radial-gradient(1200px 800px at 18% 12%,rgba(0,110,255,.28),transparent 60%),radial-gradient(900px 700px at 86% 90%,rgba(138,210,255,.16),transparent 60%),linear-gradient(160deg,#0B1F45 0%,#061126 55%,#040B1C 100%)}
+.slide.on{opacity:1;pointer-events:auto}
+.kick{position:absolute;left:110px;top:70px;font-size:24px;letter-spacing:.24em;font-weight:500;color:#F6DC8C;display:flex;align-items:center;gap:18px}
+.kick:before{content:"";width:46px;height:2px;background:#F6DC8C}
+h1{position:absolute;left:110px;top:112px;font-family:Playfair;font-style:italic;font-weight:400;font-size:92px;line-height:1.02;color:#F4EFE6;letter-spacing:-.01em}
+h1 em{color:#8AD2FF}
+.logo{position:absolute;right:90px;top:62px;width:190px}
+.pg{position:absolute;right:96px;bottom:40px;font-size:22px;color:#9DB3D6}
+.ph{position:absolute;border-radius:34px;background:#0b0f16;padding:9px;box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08)}
+.ph .in{position:relative;width:100%;height:100%;border-radius:26px;overflow:hidden;background:#000}
+video{display:block;width:100%;height:100%;object-fit:cover}
+.cap{position:absolute;left:12px;right:12px;top:50%;transform:translateY(-50%);padding:22px 20px;border-radius:20px;background:rgba(6,17,38,.78);backdrop-filter:blur(10px);border:1px solid rgba(138,210,255,.35);text-align:center;transition:all .8s cubic-bezier(.2,.8,.2,1);font-family:Playfair;font-style:italic;font-size:34px;line-height:1.12;color:#F4EFE6;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.cap small{display:block;font:500 14px Inter;letter-spacing:.22em;color:#F6DC8C;margin-bottom:10px;font-style:normal}
+.cap.min{top:auto;bottom:12px;transform:none;font-size:20px;padding:10px 12px}
+.cap.min small{display:none}
+.snd{position:absolute;right:12px;top:12px;z-index:5;border:0;border-radius:999px;padding:8px 14px;font:700 14px Inter;background:rgba(255,255,255,.92);color:#0B1F45;cursor:pointer}
+.lap{position:absolute}
+.lap .bz{background:#0b0f16;border-radius:22px 22px 10px 10px;padding:14px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08)}
+.lap .sc{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#fff}
+.lap .base{height:16px;margin:0 -36px;border-radius:0 0 16px 16px;background:linear-gradient(#cfd5de,#8f99a8)}
+.lab{margin-top:16px;font-size:22px;color:#D7E3F5;font-weight:300}.lab b{color:#fff;font-weight:600}
+.ifr{position:absolute;left:0;top:0;width:1280px;height:6000px;border:0;transform-origin:0 0;animation:scr 34s ease-in-out infinite alternate}
+@keyframes scr{0%,6%{translate:0 0}100%{translate:0 -4200px}}
+.stat{position:absolute}
+.stat .v{font-family:Playfair;font-style:italic;font-size:190px;line-height:.9;color:#F4EFE6}
+.stat .v.b{color:#8AD2FF}
+.stat .l{font-size:30px;color:#D7E3F5;font-weight:300;margin-top:10px;line-height:1.25}
+.src{position:absolute;left:110px;bottom:38px;font-size:17px;color:#7F95B8;font-weight:300;max-width:1500px}
+.card{position:absolute;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);padding:22px 26px}
+.card .t{font-size:16px;letter-spacing:.2em;color:#8AD2FF;font-weight:600}
+.card .n{font-family:Playfair;font-style:italic;font-size:40px;color:#F4EFE6;margin:6px 0 4px}
+.card .d{font-size:19px;color:#C9D6EA;font-weight:300;line-height:1.3}
+.em{position:absolute;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 26px 60px rgba(0,0,0,.55)}
+.em iframe{position:absolute;left:0;top:0;width:640px;height:3200px;border:0;transform-origin:0 0;animation:escr 22s ease-in-out infinite alternate}
+@keyframes escr{0%,8%{translate:0 0}100%{translate:0 -1900px}}
+.em .tag{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;background:linear-gradient(transparent,rgba(4,11,28,.95));font-size:17px;color:#fff;z-index:2}
+.nav{position:fixed;right:18px;bottom:14px;z-index:99;display:flex;gap:8px;opacity:.25;transition:opacity .3s}.nav:hover{opacity:1}
+.nav button{font:600 14px Inter;padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;cursor:pointer}
+.arrow{stroke:#8AD2FF;stroke-width:2.5;fill:none}
+</style></head><body><div id="stage">
+
+<!-- 1 COVER -->
+<section class="slide on"><video data-src="https://longevitylifeacademy.pages.dev/assets/hero-bg.mp4" muted loop playsinline style="position:absolute;inset:0;opacity:.45"></video><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,17,38,.3),rgba(6,17,38,.9))"></div>
+<div style="position:absolute;left:0;top:330px;width:1920px;text-align:center"><div style="font-size:30px;letter-spacing:.3em;color:#8AD2FF">LONGEVITY LIFE ACADEMY · COMPANY MEETING</div><div style="font-family:Playfair;font-style:italic;font-size:150px;line-height:1.05;color:#F4EFE6;margin-top:36px">What we built.</div><div style="font-family:Playfair;font-style:italic;font-size:60px;color:#8AD2FF;margin-top:28px">And what we are doing now.</div></div><img class="logo" src="img/logo-dark.png"><div class="pg">01 / 07</div></section>
+
+<!-- 2 MASTERCLASS -->
+<section class="slide"><div class="kick">JULIE'S MASTERCLASS · LIVE ON ZOOM</div><h1>The full thing, <em>live.</em></h1><img class="logo" src="img/logo-dark.png">
+<div class="stat" style="left:110px;top:300px"><div class="v">200</div><div class="l">people bought a seat<br><span style="font-size:22px;color:#9DB3D6">212 paid orders · $49 standard, $79 VIP</span></div></div>
+<div style="position:absolute;left:110px;top:600px;width:560px">
+<div style="display:flex;height:84px;border-radius:16px;overflow:hidden;font-size:22px;font-weight:600"><div style="flex:2;background:#006EFF;display:grid;place-items:center">60 min · Masterclass</div><div style="flex:1;background:#F6DC8C;color:#0B1F45;display:grid;place-items:center">30 min · VIP Q&amp;A</div></div>
+<div style="font-size:22px;color:#C9D6EA;margin-top:16px;font-weight:300;line-height:1.35">7:00 PM ET Julie live · 8:00 PM ET private VIP Q&amp;A with Julie · attendee-only Blueprint offer in chat</div></div>
+<div id="hooks"></div>
+<div class="src">Sources: ActiveCampaign, paid deals with product “Longevity Masterclass”, created 16 Sep – 2 Nov 2026, pulled 4 Nov 2026 23:15 Israel time · Timing: Courtney Run of Show V3 · Clips: Julie's Riverside hooks</div><div class="pg">02 / 07</div></section>
+
+<!-- 3 NOVEMBER PROMO -->
+<section class="slide"><div class="kick">NOVEMBER E-COMMERCE PROMO · THE BLUEPRINT</div><h1>A direct-purchase <em>funnel.</em></h1><img class="logo" src="img/logo-dark.png">
+<div style="position:absolute;right:110px;top:150px;font-size:26px;color:#D7E3F5;font-weight:300;text-align:right;line-height:1.4">$79 month 1 · then $169 × 4<br><span style="color:#9DB3D6;font-size:21px">VIP Masterclass seat included · 14-day refund</span></div>
+<div class="lap" style="left:110px;top:300px;width:1060px"><div class="bz"><div class="sc"><video data-src="v/bp_pagesdev.mp4" poster="v/bp_pagesdev.jpg" muted loop playsinline></video></div></div><div class="base"></div><div class="lab"><b>Blueprint site</b> · pricing, coupon, 3-step checkout · longevitylifeacademy.pages.dev</div></div>
+<div class="lap" style="left:1250px;top:300px;width:560px"><div class="bz"><div class="sc"><video data-src="v/event_attendees.mp4" poster="v/event_attendees.jpg" muted loop playsinline></video></div></div><div class="base"></div><div class="lab"><b>Event promo page</b> · shown live in the masterclass chat</div></div>
+<div class="lap" style="left:1250px;top:690px;width:560px"><div class="bz"><div class="sc"><iframe class="ifr" data-src="https://www.longevitylifeacademy.com/masterclass-72hours/" style="scale:.3398"></iframe></div></div><div class="base"></div><div class="lab"><b>72-hour offer page</b> · live site</div></div>
+<div class="src">Price: live pages.dev offer section, 4 Nov 2026. Screen recordings captured headless at 2560×1440, nothing submitted.</div><div class="pg">03 / 07</div></section>
+
+<!-- 4 SITES -->
+<section class="slide"><div class="kick">THE SITES</div><h1>One brand, <em>every page.</em></h1><img class="logo" src="img/logo-dark.png">
+<div class="lap" style="left:110px;top:290px;width:820px"><div class="bz"><div class="sc"><video data-src="v/lla_beauty.mp4" poster="v/lla_beauty.jpg" muted loop playsinline></video></div></div><div class="base"></div><div class="lab"><b>longevitylifeacademy.com</b> · the look and feel</div></div>
+<div class="lap" style="left:990px;top:290px;width:820px"><div class="bz"><div class="sc"><video data-src="v/lla_pages.mp4" poster="v/lla_pages.jpg" muted loop playsinline></video></div></div><div class="base"></div><div class="lab"><b>Inside the site</b> · about, Julie, topics, bio-age, CGM, blog</div></div>
+<div class="lap" style="left:660px;top:800px;width:0"></div>
+<div class="src" style="bottom:70px">Masterclass site (live): longevitylifeacademy.com/julie-masterclass</div>
+<div class="lap" style="left:1450px;top:760px;width:360px;display:none"></div>
+<div class="pg">04 / 07</div></section>
+
+<!-- 5 EMAIL ENGINE -->
+<section class="slide"><div class="kick">THE EMAIL ENGINE · BUILT FOR ACTIVECAMPAIGN</div><h1>Every step has <em>an email.</em></h1><img class="logo" src="img/logo-dark.png">
+<svg style="position:absolute;left:110px;top:300px" width="700" height="700"><defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#8AD2FF"/></marker></defs>
+<path class="arrow" d="M120 70 V120" marker-end="url(#a)"/><path class="arrow" d="M120 230 V280" marker-end="url(#a)"/><path class="arrow" d="M120 390 V440" marker-end="url(#a)"/><path class="arrow" d="M240 120 H330" marker-end="url(#a)"/><path class="arrow" d="M240 500 H330" marker-end="url(#a)"/></svg>
+<div class="card" style="left:110px;top:270px;width:250px;padding:14px 20px"><div class="t">ACQUIRE</div><div class="d">IIBS · Rosen · LLA lists<br>16 invites by segment</div></div>
+<div class="card" style="left:110px;top:430px;width:250px;padding:14px 20px"><div class="t">CHECKOUT</div><div class="d">Started, picked a date or reached payment</div></div>
+<div class="card" style="left:450px;top:430px;width:360px;padding:14px 20px"><div class="t">ABANDONED · 3 FUNNELS</div><div class="d">9 emails, 30 min to 48 h</div></div>
+<div class="card" style="left:110px;top:590px;width:250px;padding:14px 20px"><div class="t">PAID</div><div class="d">Onboarding · 4 emails to the session</div></div>
+<div class="card" style="left:110px;top:750px;width:250px;padding:14px 20px"><div class="t">AFTER</div><div class="d">Attended → Blueprint credit, 4 emails</div></div>
+<div class="card" style="left:450px;top:750px;width:360px;padding:14px 20px"><div class="t">NO-SHOW</div><div class="d">Seat moves to the next date · 4 emails</div></div>
+<div id="emails"></div>
+<div class="src">Sources: GitHub gitteromri-ux/lla-masterclass-emails (5 funnels, 21 email files) and gitteromri-ux/julie-masterclass-blast (16 segment invites), sent to Chris for ActiveCampaign.</div><div class="pg">05 / 07</div></section>
+
+<!-- 6 REELS -->
+<section class="slide"><div class="kick">NEW BLUEPRINT VIDEO · NOVEMBER</div><h1>The new <em>reels.</em></h1><img class="logo" src="img/logo-dark.png"><div id="reels1"></div>
+<div class="src">Source: gitteromri-ux/lla-blueprint-nov-adjusted final/clips.json (status FINAL). Muted autoplay; tap Sound for the original music.</div><div class="pg">06 / 07</div></section>
+
+<!-- 7 REELS 2 -->
+<section class="slide"><div class="kick">NEW BLUEPRINT VIDEO · NOVEMBER</div><h1>Every format, <em>every feed.</em></h1><img class="logo" src="img/logo-dark.png"><div id="reels2"></div>
+<div class="src">Source: final/clips.json, 1:1 and 4:5 versions for Feed.</div><div class="pg">07 / 07</div></section>
+</div>
+<div class="nav"><button onclick="go(-1)">◀</button><button onclick="go(1)">▶</button><button onclick="document.documentElement.requestFullscreen()">Full screen</button></div>
+<script>
+const H='https://gitteromri-ux.github.io/lla-handover/claude-versions/',U='https://gitteromri-ux.github.io/lla-julie-ugc-ads/blueprint-nov/',RW='https://raw.githubusercontent.com/gitteromri-ux/lla-blueprint-nov-adjusted/ef98cc315dee1e3e3c24c4431c6e79f4a8037fda/final/claude/';
+function phone(x,y,w,h,src,cap,tag,poster){return `<div class="ph" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px"><div class="in"><video data-src="${src}" ${poster?`poster="${poster}"`:''} muted loop playsinline></video><button class="snd">Sound</button>${cap?`<div class="cap"><small>${tag||''}</small>${cap}</div>`:''}</div></div>`}
+const hooks=[['cake','Longevity is like a cake.'],['sugar','Sugar cravings aren’t willpower.'],['wine','Your wine is making hot flashes worse.'],['aging','Age 6.5 years in 10?'],['hrv','HRV'],['fasting','Fasting']];
+document.getElementById('hooks').innerHTML=hooks.map((h,i)=>phone(740+i*190-(i>2?0:0),300+(i%2)*40,176,312*1.0,'v/'+h[0]+'.mp4','','', 'v/'+h[0]+'.jpg')).join('');
+// bigger hook layout: 3x2
+document.getElementById('hooks').innerHTML=hooks.map((h,i)=>phone(760+(i%3)*360,250+Math.floor(i/3)*400,0,0,'v/'+h[0]+'.mp4',h[1],'JULIE · RIVERSIDE','v/'+h[0]+'.jpg')).join('');
+document.querySelectorAll('#hooks .ph').forEach((p,i)=>{p.style.width='330px';p.style.height='380px';p.style.left=(760+(i%3)*360)+'px';p.style.top=(250+Math.floor(i/3)*400)+'px'});
+const r1=[[H+'Claude_Ad25_card-blue_15s_9x16_1080x1920_Reels-Stories.mp4','Ad 25 · card'],[H+'Claude_Ad26_zoom-blue_15s_9x16_1080x1920_Reels-Stories.mp4','Ad 26 · zoom'],[H+'Claude_Ad27_event-zoom_15s_9x16_1080x1920_Reels-Stories.mp4','Ad 27 · event'],[RW+'ad17_VIP_regen_9x16.mp4','Ad 17 · VIP'],[U+'Blueprint_UGC_w46_9x16_NOV.mp4','Presenter · 46'],[U+'Blueprint_UGC_man_9x16_NOV.mp4','Presenter · man']];
+document.getElementById('reels1').innerHTML=r1.map((r,i)=>phone(110+i*290,280,262,466,r[0],r[1],'BLUEPRINT')).join('');
+const r2=[[H+'Claude_Ad25_card-blue_15s_1x1_1080x1080_Square.mp4','Ad 25 · 1:1'],[H+'Claude_Ad26_zoom-blue_15s_4x5_1080x1350_Feed.mp4','Ad 26 · 4:5'],[H+'Claude_Ad27_event-zoom_15s_1x1_1080x1080_Square.mp4','Ad 27 · 1:1'],[RW+'ad17_VIP_regen_1x1.mp4','Ad 17 · 1:1'],[U+'Blueprint_UGC_w46_1x1_NOV.mp4','Presenter · 1:1'],[U+'Blueprint_UGC_man_1x1_NOV.mp4','Presenter · 1:1']];
+document.getElementById('reels2').innerHTML=r2.map((r,i)=>phone(110+(i%3)*580,270+Math.floor(i/3)*390,540,360,r[0],r[1],'FEED')).join('');
+const E='https://gitteromri-ux.github.io/lla-masterclass-emails/emails/';
+const em=[['jm-a3-1','Abandoned · payment'],['jm-b1','Paid · confirmation'],['jm-u1','After · $200 credit'],['jm-x1','No-show · new date']];
+document.getElementById('emails').innerHTML=em.map((e,i)=>`<div class="em" style="left:${880+i*250}px;top:${260+(i%2)*60}px;width:230px;height:${640}px"><iframe data-src="${E+e[0]}.html" style="scale:.359"></iframe><div class="tag">${e[1]}</div></div>`).join('');
+// sound buttons
+document.addEventListener('click',e=>{if(e.target.classList.contains('snd')){const v=e.target.parentNode.querySelector('video');v.muted=!v.muted;e.target.textContent=v.muted?'Sound':'Mute';if(!v.muted)v.play();e.stopPropagation()}});
+const S=[...document.querySelectorAll('.slide')];let cur=0;
+function act(i){S.forEach((s,j)=>{const on=j===i;s.classList.toggle('on',on);s.querySelectorAll('video').forEach(v=>{if(on){if(!v.src)v.src=v.dataset.src;v.play().catch(()=>{})}else{v.pause();v.muted=true}});s.querySelectorAll('iframe').forEach(f=>{if(on&&!f.src)f.src=f.dataset.src})});}
+function go(d){cur=Math.max(0,Math.min(S.length-1,cur+d));act(cur);location.hash=cur+1}
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key))go(1);if(['ArrowLeft','PageUp'].includes(e.key))go(-1)});
+function fit(){const s=Math.min(innerWidth/1920,innerHeight/1080);document.getElementById('stage').style.transform=`translate(-50%,-50%) scale(${s})`}
+addEventListener('resize',fit);fit();
+// caption cards: big at start of each loop, then minimise
+setInterval(()=>{document.querySelectorAll('.slide.on .ph').forEach(p=>{const v=p.querySelector('video'),c=p.querySelector('.cap');if(c&&v)c.classList.toggle('min',v.currentTime>3.2)})},250);
+cur=Math.max(0,(parseInt(location.hash.slice(1))||1)-1);act(cur);
+</script></body></html>
